@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Rose & Co. Salon | Services</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="assets/img/logo.svg" alt="Rose & Co. logo">
+      <span class="name">Rose & Co. Salon</span>
+    </a>
+    <nav class="links">
+      <a href="offerings.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="pill" href="contact.html">Book Now</a>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+
+    <div class="svc-hero">
+      <div class="svc-hero-img" role="img" aria-label="Salon interior"></div>
+
+      <div class="svc-hero-copy">
+        <h1 class="svc-title">Services</h1>
+        <p class="svc-sub">
+          Boutique hair services focused on healthy hair, elevated color, and effortless styling.
+          If you are not sure what to book, start with a consultation and we will guide you.
+        </p>
+
+        <div class="svc-actions">
+          <a class="pill" href="contact.html">Book Now</a>
+          <a class="ghost" href="contact.html">Consultation First</a>
+        </div>
+
+        <div class="svc-notes">
+          <div><strong>Location:</strong> Florence, KY</div>
+          <div><strong>Hours:</strong> Tue–Sat</div>
+          <div><strong>Specialties:</strong> Color + Lived-in Blonde</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-strip">
+      <img src="assets/img/services-1.jpg" alt="Color result">
+      <img src="assets/img/services-2.jpg" alt="Styling result">
+      <img src="assets/img/services-3.jpg" alt="Salon detail">
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="svc-grid">
+
+      <div class="svc-block">
+        <h2>Color</h2>
+        <p class="kicker">Dimensional, wearable color with a healthy-hair plan.</p>
+
+        <ul class="svc-list">
+          <li><span>Signature Color</span><em>Root refresh or all-over color tailored to your tone.</em></li>
+          <li><span>Lived-In Blonde / Balayage</span><em>Soft grow-out with bright, natural dimension.</em></li>
+          <li><span>Gloss + Tone</span><em>Refresh tone and add shine between appointments.</em></li>
+        </ul>
+      </div>
+
+      <div class="svc-block">
+        <h2>Cuts + Styling</h2>
+        <p class="kicker">Low-stress appointments with polished results.</p>
+
+        <ul class="svc-list">
+          <li><span>Women’s Cut + Style</span><em>Customized cut with a finish that fits your routine.</em></li>
+          <li><span>Men’s Cut</span><em>Clean, classic, easy to maintain.</em></li>
+          <li><span>Blowout + Style</span><em>Effortless volume and movement for any occasion.</em></li>
+        </ul>
+      </div>
+
+      <div class="svc-block">
+        <h2>Extensions</h2>
+        <p class="kicker">Natural-looking fullness and length with a consultation-first approach.</p>
+
+        <ul class="svc-list">
+          <li><span>Extensions Consultation</span><em>Color match, maintenance plan, and accurate quote.</em></li>
+          <li><span>Install + Blend</span><em>Customized placement for seamless results.</em></li>
+        </ul>
+      </div>
+
+      <div class="svc-block">
+        <h2>Treatments</h2>
+        <p class="kicker">Repair, hydration, and scalp care for stronger hair.</p>
+
+        <ul class="svc-list">
+          <li><span>Deep Hydration</span><em>Moisture boost for softness, shine, and manageability.</em></li>
+          <li><span>Bond Builder</span><em>Strength-focused support for blonding and color care.</em></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="svc-feature" role="img" aria-label="Salon lifestyle image"></div>
+
+    <div class="banner" style="margin-top:14px;">
+      <div>
+        <strong>Not sure what to book?</strong>
+        <div style="color:var(--muted); margin-top:6px;">Send a message and we will recommend the right service.</div>
+      </div>
+      <a class="pill" href="contact.html">Start Here</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <small>© 2026 Rose & Co. Salon</small>
+    <small>Built by Williams Digital Group</small>
+  </div>
+</footer>
+
+<style>
+  /* ===== Editorial boutique tuning (less boxy, more premium) ===== */
+
+  .svc-hero{
+    display:grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap:22px;
+    align-items:stretch;
+  }
+
+  .svc-hero-img{
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    min-height: 460px;
+    background: url("assets/img/services-hero.jpg") center / cover no-repeat;
+    box-shadow: 0 10px 26px rgba(31,26,28,.06);
+    overflow:hidden;
+  }
+
+  .svc-hero-copy{
+    padding-top: 8px;
+  }
+
+  .svc-title{
+    margin: 0 0 10px;
+    font-size: clamp(36px, 4.4vw, 56px);
+    line-height: 1.02;
+    letter-spacing: -.8px;
+    font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+  }
+
+  .svc-sub{
+    margin: 0 0 14px;
+    color: var(--muted);
+    line-height: 1.75;
+    font-size: 16.5px;
+    max-width: 44ch;
+  }
+
+  .svc-actions{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top: 16px;
+  }
+
+  .svc-notes{
+    margin-top: 18px;
+    color: var(--muted);
+    line-height: 1.9;
+    font-weight: 750;
+  }
+  .svc-notes strong{ color: var(--ink); }
+
+  /* Slimmer image strip (more boutique, less loud) */
+  .svc-strip{
+    margin-top: 18px;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:12px;
+  }
+  .svc-strip img{
+    width:100%;
+    height: 120px;
+    object-fit: cover;
+    display:block;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    box-shadow: 0 8px 18px rgba(31,26,28,.05);
+  }
+
+  /* SERVICES = editorial (remove big boxed cards) */
+  .svc-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:30px;
+    margin-top: 8px;
+  }
+
+  .svc-block{
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .svc-block h2{
+    margin: 0 0 6px;
+    font-size: 22px;
+    font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+    letter-spacing: -.2px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+
+  .svc-block h2::before{
+    content:"";
+    width:10px;
+    height:10px;
+    border-radius:999px;
+    background: var(--primary);
+    box-shadow: 0 6px 14px rgba(255,79,163,.25);
+    flex:0 0 auto;
+  }
+
+  .svc-block .kicker{
+    margin: 0 0 16px;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .svc-list{
+    list-style:none;
+    padding:0;
+    margin: 0;
+    display:flex;
+    flex-direction:column;
+    gap:0;
+  }
+
+  .svc-list li{
+    position: relative;
+    padding: 12px 0;
+    border: 0;
+  }
+
+  .svc-list li + li{
+    border-top: 1px solid rgba(0,0,0,.06);
+  }
+
+  .svc-list span{
+    display:block;
+    font-weight: 950;
+    color: var(--ink);
+    margin-bottom: 4px;
+    letter-spacing: .1px;
+  }
+
+  .svc-list em{
+    display:block;
+    font-style: normal;
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 52ch;
+  }
+
+  .svc-list li:hover{
+    background: rgba(255,255,255,.35);
+    border-radius: 14px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  /* BIG IMAGE RESET (keep it, but make it feel like a magazine spread) */
+  .svc-feature{
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    min-height: 340px;
+    background: url("assets/img/services-feature.jpg") center / cover no-repeat;
+    box-shadow: 0 10px 26px rgba(31,26,28,.06);
+    overflow:hidden;
+  }
+
+  .banner{
+    margin-top: 16px;
+  }
+
+  @media (max-width: 900px){
+    .svc-hero{ grid-template-columns: 1fr; }
+    .svc-hero-img{ min-height: 320px; }
+    .svc-strip{ grid-template-columns: 1fr; }
+    .svc-strip img{ height: 190px; }
+    .svc-grid{ grid-template-columns: 1fr; gap:26px; }
+  }
+</style>
+
+</body>
+</html>

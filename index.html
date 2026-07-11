@@ -1,0 +1,2148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/favicon.png">
+  <meta property="og:image" content="https://williamsdigitalgroup.com/assets/social-preview.jpg">
+  <meta property="og:url" content="https://williamsdigitalgroup.com">
+  <meta property="twitter:card" content="summary_large_image">
+
+  <title>Williams Digital Group | Websites, Portals & Digital Systems</title>
+  <meta
+    name="description"
+    content="Williams Digital Group designs and builds modern websites, client portals, dashboards, and digital systems for growing businesses."
+  />
+
+  <meta property="og:title" content="Williams Digital Group" />
+  <meta
+    property="og:description"
+    content="Modern websites, client portals, dashboards, and digital systems built around real business needs."
+  />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root {
+      --navy: #061426;
+      --navy-2: #0c1e35;
+      --navy-3: #102844;
+      --blue: #3b82f6;
+      --blue-2: #60a5fa;
+      --purple: #8b5cf6;
+      --cyan: #22d3ee;
+      --ink: #0f172a;
+      --text: #334155;
+      --muted: #64748b;
+      --line: rgba(15, 23, 42, 0.1);
+      --soft: #f5f7fb;
+      --white: #ffffff;
+      --card: #ffffff;
+      --shadow: 0 24px 70px rgba(15, 23, 42, 0.14);
+      --shadow-soft: 0 14px 40px rgba(15, 23, 42, 0.09);
+      --radius: 24px;
+      --radius-sm: 16px;
+      --max: 1180px;
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font);
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(calc(100% - 36px), var(--max));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 18px;
+      color: var(--blue);
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 14px;
+      color: var(--ink);
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 12px 18px;
+      border: 1px solid transparent;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 900;
+      transition: transform 0.2s ease, box-shadow 0.2s ease,
+        background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: var(--white);
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      box-shadow: 0 16px 36px rgba(59, 130, 246, 0.28);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 20px 44px rgba(59, 130, 246, 0.36);
+    }
+
+    .btn-secondary {
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-light {
+      color: var(--ink);
+      border-color: var(--line);
+      background: var(--white);
+      box-shadow: var(--shadow-soft);
+    }
+
+    /* Navigation */
+    .topbar {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 50;
+      transition: background 0.25s ease, border-color 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .topbar.scrolled {
+      background: rgba(6, 20, 38, 0.88);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+      box-shadow: 0 12px 34px rgba(0, 0, 0, 0.16);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-inner {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 950;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      position: relative;
+      width: 38px;
+      height: 38px;
+      border-radius: 13px;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      box-shadow: 0 12px 26px rgba(59, 130, 246, 0.35);
+    }
+
+    .brand-mark::before,
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      top: 9px;
+      width: 6px;
+      height: 20px;
+      border-radius: 999px;
+      background: white;
+      transform: skewX(-18deg);
+    }
+
+    .brand-mark::before {
+      left: 10px;
+    }
+
+    .brand-mark::after {
+      right: 10px;
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .desktop-nav a {
+      padding: 9px 11px;
+      border-radius: 11px;
+      color: rgba(255, 255, 255, 0.76);
+      text-decoration: none;
+      font-size: 0.93rem;
+      font-weight: 800;
+    }
+
+    .desktop-nav a:hover {
+      color: white;
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .nav-cta {
+      margin-left: 8px;
+      color: white !important;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      box-shadow: 0 10px 26px rgba(59, 130, 246, 0.28);
+    }
+
+    .menu-button {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 12px;
+      color: white;
+      background: rgba(255, 255, 255, 0.07);
+      cursor: pointer;
+    }
+
+    .mobile-nav {
+      display: none;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      isolation: isolate;
+      min-height: 850px;
+      padding: 150px 0 96px;
+      overflow: hidden;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 18% 24%, rgba(59, 130, 246, 0.2), transparent 30%),
+        radial-gradient(circle at 83% 30%, rgba(139, 92, 246, 0.18), transparent 28%),
+        linear-gradient(145deg, #071426 0%, #0a1c33 58%, #071426 100%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      opacity: 0.22;
+      background-image:
+        linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.85), transparent 92%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -240px;
+      z-index: -1;
+      width: 850px;
+      height: 500px;
+      border-radius: 50%;
+      transform: translateX(-50%);
+      background: rgba(59, 130, 246, 0.16);
+      filter: blur(100px);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .hero-copy h1 {
+      max-width: 700px;
+      margin: 0;
+      font-size: clamp(3.25rem, 7.2vw, 6.75rem);
+      line-height: 0.92;
+      letter-spacing: -0.065em;
+    }
+
+    .gradient-text {
+      color: transparent;
+      background: linear-gradient(100deg, var(--blue-2), #c4b5fd 55%, var(--cyan));
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .hero-copy p {
+      max-width: 650px;
+      margin: 26px 0 0;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: clamp(1rem, 1.8vw, 1.17rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .hero-proof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px 28px;
+      margin-top: 28px;
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 0.92rem;
+      font-weight: 750;
+    }
+
+    .hero-proof span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-proof span::before {
+      content: "✓";
+      display: grid;
+      place-items: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      color: white;
+      background: rgba(96, 165, 250, 0.2);
+    }
+
+    .device-stage {
+      position: relative;
+      min-height: 550px;
+      display: grid;
+      place-items: center;
+    }
+
+    .device-glow {
+      position: absolute;
+      inset: 12% 5% 5%;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(59,130,246,.28), rgba(139,92,246,.22));
+      filter: blur(60px);
+    }
+
+    .laptop {
+      position: relative;
+      width: min(100%, 650px);
+      transform: perspective(1200px) rotateY(-5deg) rotateX(2deg);
+      filter: drop-shadow(0 35px 50px rgba(0, 0, 0, 0.4));
+    }
+
+    .laptop-screen {
+      position: relative;
+      padding: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 22px 22px 12px 12px;
+      overflow: hidden;
+      background: #07111f;
+    }
+
+    .screen-content {
+      min-height: 350px;
+      padding: 18px;
+      border-radius: 13px;
+      background:
+        linear-gradient(140deg, rgba(59, 130, 246, 0.12), transparent 45%),
+        #f7f9fc;
+    }
+
+    .screen-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .screen-brand {
+      width: 105px;
+      height: 10px;
+      border-radius: 999px;
+      background: #13263e;
+    }
+
+    .screen-links {
+      display: flex;
+      gap: 7px;
+    }
+
+    .screen-links span {
+      width: 26px;
+      height: 6px;
+      border-radius: 999px;
+      background: #cbd5e1;
+    }
+
+    .screen-hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+      align-items: center;
+      min-height: 180px;
+      padding: 24px;
+      border-radius: 17px;
+      color: white;
+      background:
+        radial-gradient(circle at 82% 20%, rgba(139,92,246,.45), transparent 30%),
+        linear-gradient(135deg, #0c1e35, #153d66);
+    }
+
+    .screen-kicker,
+    .screen-line,
+    .screen-button {
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .screen-kicker {
+      width: 62px;
+      height: 7px;
+      margin-bottom: 11px;
+      background: #60a5fa;
+    }
+
+    .screen-line {
+      height: 12px;
+      margin-bottom: 9px;
+    }
+
+    .screen-line:nth-child(2) {
+      width: 92%;
+    }
+
+    .screen-line:nth-child(3) {
+      width: 72%;
+    }
+
+    .screen-button {
+      width: 76px;
+      height: 22px;
+      margin-top: 18px;
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    }
+
+    .screen-art {
+      position: relative;
+      height: 140px;
+    }
+
+    .screen-art::before,
+    .screen-art::after {
+      content: "";
+      position: absolute;
+      border-radius: 22px;
+      transform: rotate(7deg);
+    }
+
+    .screen-art::before {
+      inset: 16px 10px 6px 35px;
+      background: linear-gradient(135deg, #60a5fa, #8b5cf6);
+    }
+
+    .screen-art::after {
+      inset: 32px 35px 22px 10px;
+      border: 1px solid rgba(255,255,255,.35);
+      background: rgba(255,255,255,.11);
+      backdrop-filter: blur(8px);
+    }
+
+    .screen-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 13px;
+    }
+
+    .screen-card {
+      height: 72px;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      background: white;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+    }
+
+    .laptop-base {
+      width: 110%;
+      height: 20px;
+      margin-left: -5%;
+      border-radius: 3px 3px 18px 18px;
+      background: linear-gradient(#aeb8c5, #697586);
+    }
+
+    .phone {
+      position: absolute;
+      right: -5px;
+      bottom: 8px;
+      width: 165px;
+      padding: 9px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 30px;
+      background: #07111f;
+      box-shadow: 0 28px 50px rgba(0, 0, 0, 0.4);
+      transform: rotate(4deg);
+    }
+
+    .phone-screen {
+      min-height: 305px;
+      padding: 15px;
+      border-radius: 22px;
+      overflow: hidden;
+      background: #f8fafc;
+    }
+
+    .phone-notch {
+      width: 58px;
+      height: 7px;
+      margin: 0 auto 18px;
+      border-radius: 999px;
+      background: #0f172a;
+    }
+
+    .phone-block {
+      height: 94px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #0d223b, #2563eb);
+    }
+
+    .phone-line {
+      height: 8px;
+      margin-top: 14px;
+      border-radius: 999px;
+      background: #cbd5e1;
+    }
+
+    .phone-line.short {
+      width: 70%;
+    }
+
+    .phone-card {
+      height: 55px;
+      margin-top: 12px;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      background: white;
+    }
+
+    /* Featured Work */
+    .work {
+      padding: 110px 0 100px;
+      background:
+        radial-gradient(circle at 100% 0%, rgba(59,130,246,.08), transparent 34%),
+        var(--white);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .project-card:nth-child(3) {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      min-height: 430px;
+    }
+
+    .project-card:nth-child(3) .project-visual {
+      min-height: 430px;
+    }
+
+    .project-card:nth-child(3) .project-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 44px;
+    }
+
+    .project-card:nth-child(3) .browser {
+      top: 46px;
+      left: 44px;
+      right: 44px;
+      min-height: 340px;
+    }
+
+    .project-card:nth-child(3) .portfolio-shot {
+      height: 310px;
+    }
+
+    .project-card {
+      position: relative;
+      min-height: 500px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: white;
+      box-shadow: var(--shadow-soft);
+      transition: transform 0.28s ease, box-shadow 0.28s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow);
+    }
+
+    .project-visual {
+      position: relative;
+      min-height: 315px;
+      padding: 30px;
+      overflow: hidden;
+    }
+
+    .project-visual::after {
+      content: "";
+      position: absolute;
+      right: -45px;
+      bottom: -70px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .project-card:nth-child(1) .project-visual {
+      background: linear-gradient(140deg, #102a43, #2f80ed);
+    }
+
+    .project-card:nth-child(2) .project-visual {
+      background: linear-gradient(140deg, #24143f, #7c3aed);
+    }
+
+    .project-card:nth-child(3) .project-visual {
+      background: linear-gradient(140deg, #063d36, #12b886);
+    }
+
+    .project-card:nth-child(4) .project-visual {
+      background: linear-gradient(140deg, #312e81, #2563eb);
+    }
+
+    .browser {
+      position: absolute;
+      left: 34px;
+      right: 34px;
+      top: 42px;
+      min-height: 280px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 18px 18px 0 0;
+      background: white;
+      box-shadow: 0 30px 50px rgba(0, 0, 0, 0.25);
+      transform: rotate(-1.5deg);
+    }
+
+    .browser-bar {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      height: 28px;
+      padding: 0 10px;
+      background: #e9eef5;
+    }
+
+    .browser-bar i {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #94a3b8;
+    }
+
+    .browser-body {
+      min-height: 250px;
+      padding: 20px;
+      color: white;
+      background:
+        radial-gradient(circle at 82% 22%, rgba(255,255,255,.18), transparent 28%),
+        linear-gradient(135deg, rgba(15,23,42,.94), rgba(37,99,235,.82));
+    }
+
+    .browser-body.purple {
+      background:
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,.18), transparent 28%),
+        linear-gradient(135deg, #24143f, #7c3aed);
+    }
+
+    .browser-body.green {
+      background:
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,.18), transparent 28%),
+        linear-gradient(135deg, #063d36, #12b886);
+    }
+
+    .browser-body.indigo {
+      background:
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,.18), transparent 28%),
+        linear-gradient(135deg, #312e81, #2563eb);
+    }
+
+    .browser-body.has-image {
+      position: relative;
+      min-height: 250px;
+      padding: 0;
+      background: #ffffff;
+    }
+
+    .portfolio-shot {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .mini-logo {
+      width: 95px;
+      height: 9px;
+      margin-bottom: 42px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .mini-title {
+      width: 72%;
+      height: 15px;
+      margin-bottom: 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.92);
+    }
+
+    .mini-title.short {
+      width: 50%;
+    }
+
+    .mini-copy {
+      width: 58%;
+      height: 7px;
+      margin-top: 19px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    .mini-button {
+      width: 88px;
+      height: 25px;
+      margin-top: 25px;
+      border-radius: 999px;
+      background: white;
+    }
+
+    .project-content {
+      padding: 28px 30px 32px;
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+
+    .tag {
+      padding: 6px 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      background: var(--soft);
+      font-size: 0.76rem;
+      font-weight: 850;
+    }
+
+    .project-content h3 {
+      margin: 0 0 9px;
+      color: var(--ink);
+      font-size: 1.45rem;
+      letter-spacing: -0.025em;
+    }
+
+    .project-content p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* Capabilities */
+    .capabilities {
+      padding: 100px 0;
+      background: var(--soft);
+    }
+
+    .capability-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .capability-card {
+      min-height: 230px;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: white;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .capability-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .icon-box {
+      display: grid;
+      place-items: center;
+      width: 52px;
+      height: 52px;
+      margin-bottom: 22px;
+      border-radius: 16px;
+      color: white;
+      font-size: 1.25rem;
+      font-weight: 950;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      box-shadow: 0 12px 26px rgba(59, 130, 246, 0.22);
+    }
+
+    .capability-card h3 {
+      margin: 0 0 10px;
+      color: var(--ink);
+      font-size: 1.18rem;
+    }
+
+    .capability-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* Process */
+    .process {
+      padding: 105px 0;
+      background: white;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .process-step {
+      position: relative;
+      padding: 28px 24px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: white;
+    }
+
+    .process-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 22px;
+      border-radius: 14px;
+      color: white;
+      font-weight: 950;
+      background: var(--navy);
+    }
+
+    .process-step h3 {
+      margin: 0 0 8px;
+      color: var(--ink);
+    }
+
+    .process-step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* About */
+    .about {
+      padding: 105px 0;
+      color: white;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(59,130,246,.2), transparent 30%),
+        linear-gradient(145deg, #071426, #0b1e36);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 54px;
+      align-items: center;
+    }
+
+    .about-card {
+      min-height: 410px;
+      padding: 34px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 28px;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.11), rgba(255,255,255,.045));
+      box-shadow: 0 28px 65px rgba(0, 0, 0, 0.24);
+      backdrop-filter: blur(14px);
+    }
+
+    .about-stat {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 26px;
+    }
+
+    .stat {
+      padding: 20px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .stat strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1.7rem;
+      line-height: 1;
+    }
+
+    .stat span {
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .about-copy h2 {
+      margin: 0 0 18px;
+      font-size: clamp(2.1rem, 4.5vw, 4rem);
+      line-height: 1.03;
+      letter-spacing: -0.05em;
+    }
+
+    .about-copy p {
+      margin: 0 0 18px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1.04rem;
+    }
+
+    .about-list {
+      display: grid;
+      gap: 11px;
+      margin-top: 26px;
+    }
+
+    .about-list span {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+    }
+
+    .about-list span::before {
+      content: "✓";
+      display: grid;
+      place-items: center;
+      width: 23px;
+      height: 23px;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      color: white;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+    }
+
+    /* CTA */
+    .contact {
+      padding: 100px 0;
+      background: var(--soft);
+    }
+
+    .contact-panel {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 36px;
+      padding: 54px;
+      border-radius: 30px;
+      color: white;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(139,92,246,.35), transparent 30%),
+        linear-gradient(135deg, #071426, #14365b);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-copy h2 {
+      max-width: 620px;
+      margin: 0 0 16px;
+      font-size: clamp(2.2rem, 4.3vw, 4rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    .contact-copy p {
+      max-width: 570px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.68);
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 18px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 16px;
+      color: white;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.07);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .contact-link:hover {
+      transform: translateX(4px);
+      background: rgba(255, 255, 255, 0.11);
+    }
+
+    .contact-link small {
+      display: block;
+      color: rgba(255, 255, 255, 0.55);
+      font-weight: 750;
+    }
+
+    .contact-link strong {
+      display: block;
+      margin-top: 2px;
+      font-size: 1rem;
+    }
+
+    .contact-form {
+      padding: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(12px);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 7px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.86rem;
+      font-weight: 850;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 13px;
+      padding: 13px 14px;
+      color: white;
+      outline: none;
+      background: rgba(255, 255, 255, 0.08);
+      transition: border-color 0.2s ease, background 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: rgba(255, 255, 255, 0.42);
+    }
+
+    .form-group select {
+      color-scheme: dark;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: rgba(96, 165, 250, 0.8);
+      background: rgba(255, 255, 255, 0.11);
+      box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.14);
+    }
+
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      width: 100%;
+      border: 0;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    footer {
+      padding: 32px 0;
+      color: #94a3b8;
+      background: #061426;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      color: white;
+      font-weight: 900;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    /* Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .form-success {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 24px;
+      border: 1px solid rgba(96, 165, 250, 0.35);
+      border-radius: 20px;
+      background: rgba(59, 130, 246, 0.12);
+      color: white;
+    }
+
+    .form-success[hidden] {
+      display: none;
+    }
+
+    .form-success-icon {
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      font-size: 1.25rem;
+      font-weight: 950;
+    }
+
+    .form-success h3 {
+      margin: 0 0 5px;
+      font-size: 1.25rem;
+    }
+
+    .form-success p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Responsive */
+    @media (max-width: 980px) {
+      .desktop-nav {
+        display: none;
+      }
+
+      .menu-button {
+        display: inline-grid;
+        place-items: center;
+      }
+
+      .mobile-nav {
+        position: absolute;
+        top: 74px;
+        left: 18px;
+        right: 18px;
+        display: none;
+        padding: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 18px;
+        background: rgba(6, 20, 38, 0.97);
+        box-shadow: 0 20px 50px rgba(0,0,0,.3);
+      }
+
+      .mobile-nav.open {
+        display: grid;
+      }
+
+      .mobile-nav a {
+        padding: 12px;
+        border-radius: 12px;
+        color: rgba(255,255,255,.84);
+        text-decoration: none;
+        font-weight: 800;
+      }
+
+      .mobile-nav a:hover {
+        color: white;
+        background: rgba(255,255,255,.07);
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 130px;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .contact-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy {
+        text-align: center;
+      }
+
+      .hero-copy p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-actions,
+      .hero-proof {
+        justify-content: center;
+      }
+
+      .device-stage {
+        min-height: 500px;
+      }
+
+      .project-grid,
+      .capability-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .project-card:nth-child(3) {
+        grid-column: auto;
+        display: block;
+        min-height: 500px;
+      }
+
+      .project-card:nth-child(3) .project-visual {
+        min-height: 315px;
+      }
+
+      .project-card:nth-child(3) .project-content {
+        display: block;
+        padding: 28px 30px 32px;
+      }
+
+      .project-card:nth-child(3) .browser {
+        top: 42px;
+        left: 34px;
+        right: 34px;
+        min-height: 280px;
+      }
+
+      .project-card:nth-child(3) .portfolio-shot {
+        height: 250px;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        width: min(calc(100% - 28px), var(--max));
+      }
+
+      .hero {
+        padding: 118px 0 76px;
+      }
+
+      .hero-copy h1 {
+        font-size: clamp(3rem, 15vw, 4.6rem);
+      }
+
+      .device-stage {
+        min-height: 390px;
+      }
+
+      .laptop {
+        width: 92%;
+        transform: none;
+      }
+
+      .screen-content {
+        min-height: 255px;
+      }
+
+      .screen-hero {
+        min-height: 130px;
+        padding: 17px;
+      }
+
+      .screen-cards {
+        display: none;
+      }
+
+      .phone {
+        right: 0;
+        width: 120px;
+      }
+
+      .phone-screen {
+        min-height: 220px;
+        padding: 11px;
+      }
+
+      .phone-block {
+        height: 64px;
+      }
+
+      .project-grid,
+      .capability-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card {
+        min-height: 460px;
+      }
+
+      .project-visual {
+        min-height: 270px;
+        padding: 20px;
+      }
+
+      .browser {
+        left: 22px;
+        right: 22px;
+        top: 34px;
+      }
+
+      .work,
+      .capabilities,
+      .process,
+      .about,
+      .contact {
+        padding: 78px 0;
+      }
+
+      .contact-panel {
+        padding: 34px 24px;
+      }
+
+      .about-card {
+        min-height: auto;
+        padding: 26px;
+      }
+
+      .about-stat {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .contact-form {
+        padding: 22px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar" id="topbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Williams Digital Group home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Williams Digital Group</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#capabilities">What We Build</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a class="nav-cta" href="#contact">Start a Project</a>
+      </nav>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobileNav"
+        aria-label="Open navigation"
+      >
+        ☰
+      </button>
+
+      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+        <a href="#work">Work</a>
+        <a href="#capabilities">What We Build</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#contact">Start a Project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Strategy • Design • Development</div>
+          <h1>
+            We build digital experiences
+            <span class="gradient-text">people remember.</span>
+          </h1>
+          <p>
+            From professional websites to custom software, client portals, and business systems
+            we build digital solutions that help companies operate more efficiently.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#work">View Our Work →</a>
+            <a class="btn btn-secondary" href="#contact">Start a Conversation</a>
+          </div>
+
+          <div class="hero-proof" aria-label="Highlights">
+            <span>Custom built</span>
+            <span>Mobile first</span>
+            <span>Designed for real businesses</span>
+          </div>
+        </div>
+
+        <div class="device-stage" aria-label="Website design preview">
+          <div class="device-glow" aria-hidden="true"></div>
+
+          <div class="laptop">
+            <div class="laptop-screen">
+              <div class="screen-content">
+                <div class="screen-nav">
+                  <div class="screen-brand"></div>
+                  <div class="screen-links" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                  </div>
+                </div>
+
+                <div class="screen-hero">
+                  <div>
+                    <div class="screen-kicker"></div>
+                    <div class="screen-line"></div>
+                    <div class="screen-line"></div>
+                    <div class="screen-button"></div>
+                  </div>
+                  <div class="screen-art"></div>
+                </div>
+
+                <div class="screen-cards" aria-hidden="true">
+                  <div class="screen-card"></div>
+                  <div class="screen-card"></div>
+                  <div class="screen-card"></div>
+                </div>
+              </div>
+            </div>
+            <div class="laptop-base"></div>
+          </div>
+
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="phone-notch"></div>
+              <div class="phone-block"></div>
+              <div class="phone-line"></div>
+              <div class="phone-line short"></div>
+              <div class="phone-card"></div>
+              <div class="phone-card"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work" id="work">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="eyebrow">Featured Work</div>
+          <h2>Real platforms built to solve real business problems.</h2>
+          <p>
+            A selection of websites, platforms, and custom systems designed around
+            real business needs.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="project-visual">
+              <div class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i></div>
+                <div class="browser-body has-image">
+                  <img
+                    class="portfolio-shot"
+                    src="assets/approved-credit-coach.jpeg"
+                    alt="Approved Credit Coach website homepage"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="tag">Custom Platform</span>
+                <span class="tag">Client Portal</span>
+                <span class="tag">Automation</span>
+              </div>
+              <h3>Approved Credit Coach</h3>
+              <p>
+                A custom credit-services platform supporting client workflows,
+                reporting, agreements, uploads, tasks, and account management.
+              </p>
+              
+              <div style="margin-top:22px;">
+                <a
+                  href="https://approvedcreditcoach.com"
+                  target="_blank"
+                  rel="noopener"
+                  style="
+                    display:inline-flex;
+                    align-items:center;
+                    gap:8px;
+                    color:#2563eb;
+                    font-weight:700;
+                    text-decoration:none;
+                    transition:.2s;
+                  "
+                  onmouseover="this.style.gap='12px'"
+                  onmouseout="this.style.gap='8px'"
+                >
+                  View Live Website →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual">
+              <div class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i></div>
+                <div class="browser-body has-image">
+                  <img
+                    class="portfolio-shot"
+                    src="assets/the-dispute-coach.jpeg"
+                    alt="The Dispute Coach website homepage"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="tag">SaaS</span>
+                <span class="tag">Document Generation</span>
+                <span class="tag">User Experience</span>
+              </div>
+              <h3>The Dispute Coach</h3>
+              <p>
+                A custom credit-services platform supporting client workflows,
+                reporting, agreements, uploads, tasks, and account management.
+              </p>
+              
+              <div style="margin-top:22px;">
+                <a
+                  href="https://thedisputecoach.com"
+                  target="_blank"
+                  rel="noopener"
+                  style="
+                    display:inline-flex;
+                    align-items:center;
+                    gap:8px;
+                    color:#2563eb;
+                    font-weight:700;
+                    text-decoration:none;
+                    transition:.2s;
+                  "
+                  onmouseover="this.style.gap='12px'"
+                  onmouseout="this.style.gap='8px'"
+                >
+                  View Live Website →
+                </a>
+              </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-visual">
+              <div class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i></div>
+          
+                <div class="browser-body has-image">
+                  <img
+                    class="portfolio-shot"
+                    src="assets/home-in-cincy.jpeg"
+                    alt="Home in Cincy website homepage"
+                  />
+                </div>
+              </div>
+            </div>
+          
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="tag">Property Management</span>
+                <span class="tag">Custom Portal</span>
+                <span class="tag">Online Applications</span>
+              </div>
+          
+              <h3>Home in Cincy</h3>
+          
+              <p>
+                A custom real estate and property management platform featuring property
+                listings, online applications, tenant tools, and an administrative portal.
+              </p>
+
+              <div style="margin-top:22px;">
+                <a            
+                  href="https://homeincincy.com"            
+                  target="_blank"            
+                  rel="noopener"            
+                  style="            
+                    display:inline-flex;            
+                    align-items:center;            
+                    gap:8px;            
+                    color:#2563eb;            
+                    font-weight:700;            
+                    text-decoration:none;            
+                    transition:.2s;
+                  "
+                  onmouseover="this.style.gap='12px'"
+                  onmouseout="this.style.gap='8px'"
+                >           
+                  View Live Website →
+              </a>
+              </div>
+            </div>
+          </article>
+        
+    </section>
+
+    <section class="capabilities" id="capabilities">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="eyebrow">What We Build</div>
+          <h2>More than a pretty homepage.</h2>
+          <p>
+            We combine clean design with practical functionality so the finished
+            product is useful, clear, and easy to maintain.
+          </p>
+        </div>
+
+        <div class="capability-grid">
+          <article class="capability-card reveal">
+            <div class="icon-box">W</div>
+            <h3>Business Websites</h3>
+            <p>
+              Polished, responsive websites that make a strong first impression
+              and help customers quickly understand what you offer.
+            </p>
+          </article>
+
+          <article class="capability-card reveal">
+            <div class="icon-box">P</div>
+            <h3>Client Portals</h3>
+            <p>
+              Secure, organized experiences for clients to access information,
+              upload documents, complete steps, and track progress.
+            </p>
+          </article>
+
+          <article class="capability-card reveal">
+            <div class="icon-box">D</div>
+            <h3>Dashboards</h3>
+            <p>
+              Clear operational views that bring important tasks, data, progress,
+              and decisions into one usable place.
+            </p>
+          </article>
+
+          <article class="capability-card reveal">
+            <div class="icon-box">A</div>
+            <h3>Automation</h3>
+            <p>
+              Practical tools that reduce repetitive work, simplify handoffs, and
+              improve everyday business processes.
+            </p>
+          </article>
+
+          <article class="capability-card reveal">
+            <div class="icon-box">S</div>
+            <h3>Custom Software</h3>
+            <p>
+              Purpose-built systems designed around the workflow, users, and
+              requirements of your business.
+            </p>
+          </article>
+
+          <article class="capability-card reveal">
+            <div class="icon-box">C</div>
+            <h3>Digital Consulting</h3>
+            <p>
+              Clear recommendations for turning an idea, an inefficient process,
+              or an outdated experience into something better.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="process">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="eyebrow">Our Process</div>
+          <h2>Clear, collaborative, and built around your goals.</h2>
+          <p>
+            No difficult processes. We learn what you need, create the right direction,
+            build it carefully, and help you launch it confidently.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-step reveal">
+            <div class="process-number">01</div>
+            <h3>Discover</h3>
+            <p>We learn about your business, audience, workflow, and goals.</p>
+          </article>
+
+          <article class="process-step reveal">
+            <div class="process-number">02</div>
+            <h3>Design</h3>
+            <p>We create a clean visual direction that fits your brand and users.</p>
+          </article>
+
+          <article class="process-step reveal">
+            <div class="process-number">03</div>
+            <h3>Build</h3>
+            <p>We turn the approved direction into a fast, responsive experience.</p>
+          </article>
+
+          <article class="process-step reveal">
+            <div class="process-number">04</div>
+            <h3>Launch</h3>
+            <p>We test, connect, publish, and make sure everything works properly.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-card reveal">
+          <div class="eyebrow" style="color:#93c5fd;">Built From Experience</div>
+          <h3 style="margin:0;font-size:1.55rem;">Business thinking meets hands-on development.</h3>
+          <p style="color:rgba(255,255,255,.68);margin:14px 0 0;">
+            We build everything from polished business websites to custom software platforms, client portals, dashboards, and workflow automation - always with the goal of solving real business problems.
+          </p>
+
+          <div class="about-stat">
+            <div class="stat">
+              <strong>15+ Years</strong>
+              <span>Business, healthcare tech systems, and technology experience</span>
+            </div>
+          
+            <div class="stat">
+              <strong>Custom Built</strong>
+              <span>Websites, SaaS apps, portals, dashboards, and digital platforms</span>
+            </div>
+          
+            <div class="stat">
+              <strong>Business Focused</strong>
+              <span>Every project is designed around real operational needs</span>
+            </div>
+          
+            <div class="stat">
+              <strong>Hands-On</strong>
+              <span>Strategy, design, UX, development, launch, and ongoing support</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-copy reveal">
+          <div class="eyebrow" style="color:#93c5fd;">Why Williams Digital Group</div>
+          <h2>We understand the business behind the build.</h2>
+          <p>
+            Great digital work is not only about colors and code. It is about
+            understanding how people find you, what they need, and what should
+            happen next.
+          </p>
+          <p>
+            Every project is approached with the same question: how can this make
+            the business clearer, easier, or more effective?
+          </p>
+
+          <div class="about-list">
+            <span>Custom solutions without unnecessary complexity</span>
+            <span>Strong attention to usability and mobile experience</span>
+            <span>Direct communication and practical recommendations</span>
+            <span>Design that supports the business instead of distracting from it</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-panel reveal">
+    
+          <div class="contact-copy">
+            <div class="eyebrow" style="color:#93c5fd;">Start a Project</div>
+    
+            <h2>Tell us what you’re looking to build.</h2>
+    
+            <p>
+              Share a few details about your project and we’ll follow up to learn more.
+            </p>
+    
+            <div style="margin-top:28px;">
+              <p style="margin:0 0 6px;color:rgba(255,255,255,.52);font-size:.82rem;font-weight:800;">
+                EMAIL
+              </p>
+    
+              <a
+                href="mailto:williamsdigitalgroup@gmail.com"
+                style="color:white;text-decoration:none;font-weight:900;"
+              >
+                williamsdigitalgroup@gmail.com
+              </a>
+            </div>
+          </div>
+    
+          <form
+            class="contact-form"
+            id="contactForm"
+            action="https://formsubmit.co/ajax/williamsdigitalgroup@gmail.com"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Williams Digital Group Project Inquiry"
+            />
+    
+            <input
+              type="hidden"
+              name="_captcha"
+              value="false"
+            />
+    
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+    
+              <div class="form-group">
+                <label for="business">Business</label>
+                <input
+                  id="business"
+                  name="business"
+                  type="text"
+                  placeholder="Business name"
+                />
+              </div>
+            </div>
+    
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+    
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="Optional"
+                />
+              </div>
+            </div>
+    
+            <div class="form-group">
+              <label for="project-type">What are you looking for?</label>
+    
+              <select id="project-type" name="project_type" required>
+                <option value="">Select one</option>
+                <option>Business Website</option>
+                <option>Website Redesign</option>
+                <option>Client Portal</option>
+                <option>Dashboard</option>
+                <option>SaaS Platform</option>
+                <option>Custom Software</option>
+                <option>Automation or Workflow Improvement</option>
+                <option>Not Sure Yet</option>
+              </select>
+            </div>
+    
+            <div class="form-group">
+              <label for="message">Project details</label>
+    
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Tell us what you want to build, what is not working today, or what you would like to improve."
+                required
+              ></textarea>
+            </div>
+    
+            <button class="btn btn-primary form-submit" type="submit">
+              Send Project Inquiry
+            </button>
+          </form>
+
+          <div class="form-success" id="formSuccess" hidden>
+            <div class="form-success-icon">✓</div>
+          
+            <div>
+              <h3>Thank you!</h3>
+              <p>
+                Your message has been sent. We’ll be in touch soon.
+              </p>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-brand">Williams Digital Group</div>
+        <div>Websites, portals, dashboards, and digital systems.</div>
+      </div>
+
+      <div class="footer-links">
+        <a href="#work">Work</a>
+        <a href="#capabilities">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div>© <span id="year"></span> Williams Digital Group.</div>
+    </div>
+  </footer>
+
+  <script>
+    const topbar = document.getElementById("topbar");
+    const menuButton = document.getElementById("menuButton");
+    const mobileNav = document.getElementById("mobileNav");
+    const year = document.getElementById("year");
+
+    function updateTopbar() {
+      topbar.classList.toggle("scrolled", window.scrollY > 20);
+    }
+
+    updateTopbar();
+    window.addEventListener("scroll", updateTopbar, { passive: true });
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = mobileNav.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation" : "Open navigation"
+      );
+      menuButton.textContent = isOpen ? "×" : "☰";
+    });
+
+    mobileNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileNav.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open navigation");
+        menuButton.textContent = "☰";
+      });
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    document.querySelectorAll(".reveal").forEach((element) => {
+      observer.observe(element);
+    });
+
+    year.textContent = new Date().getFullYear();
+
+    const contactForm = document.getElementById("contactForm");
+const formSuccess = document.getElementById("formSuccess");
+
+contactForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const submitButton = contactForm.querySelector(".form-submit");
+  const originalButtonText = submitButton.textContent;
+
+  submitButton.disabled = true;
+  submitButton.textContent = "Sending...";
+
+  try {
+    const formData = new FormData(contactForm);
+
+    const response = await fetch(contactForm.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json"
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error("Form submission failed.");
+    }
+
+    contactForm.reset();
+    contactForm.hidden = true;
+    formSuccess.hidden = false;
+  } catch (error) {
+    submitButton.disabled = false;
+    submitButton.textContent = originalButtonText;
+
+    alert(
+      "Sorry, your message could not be sent. Please email williamsdigitalgroup@gmail.com."
+    );
+  }
+});
+  </script>
+</body>
+</html>
