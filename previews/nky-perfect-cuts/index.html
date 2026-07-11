@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NKY Perfect Cuts | Lawn Care &amp; Landscaping</title>
+  <meta name="description" content="Professional lawn care, landscaping, seasonal cleanup, aeration, overseeding, and snow removal throughout Northern Kentucky.">
+
+  <style>
+    :root{
+      --green:#75c900;
+      --green-dark:#3d7f08;
+      --green-soft:#eef8e5;
+      --ink:#121a14;
+      --text:#485248;
+      --muted:#788078;
+      --line:#e7ece5;
+      --soft:#f8faf7;
+      --white:#ffffff;
+      --shadow:0 18px 45px rgba(22,49,21,.10);
+      --shadow-soft:0 10px 28px rgba(22,49,21,.07);
+      --radius:24px;
+      --max:1180px;
+      --font:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:var(--font);
+      color:var(--text);
+      background:#edf2ea;
+      line-height:1.55;
+    }
+
+    img{display:block;width:100%}
+    a{color:inherit}
+    button,input,textarea,select{font:inherit}
+
+    .site-wrap{
+      position:relative;
+      width:min(calc(100% - 24px),1400px);
+      margin:24px auto;
+      overflow:hidden;
+      border-radius:34px;
+      background:#fff;
+      box-shadow:0 28px 80px rgba(22,49,21,.15);
+    }
+
+    .container{
+      width:min(calc(100% - 40px),var(--max));
+      margin:0 auto;
+    }
+
+    .section{
+      padding:76px 0;
+    }
+
+    .section-heading{
+      max-width:720px;
+      margin:0 auto 32px;
+      text-align:center;
+    }
+
+    .eyebrow{
+      margin-bottom:8px;
+      color:var(--green-dark);
+      font-size:.72rem;
+      font-weight:900;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+
+    .section-heading h2,
+    .about-copy h2,
+    .contact-copy h2{
+      margin:0;
+      color:var(--ink);
+      letter-spacing:-.04em;
+      line-height:1.05;
+    }
+
+    .section-heading h2{font-size:clamp(2rem,4vw,3.15rem)}
+    .section-heading p{margin:12px 0 0;color:var(--muted)}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:46px;
+      padding:11px 17px;
+      border:1px solid transparent;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:900;
+      transition:.2s ease;
+    }
+
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{
+      color:#14220b;
+      background:linear-gradient(135deg,#9be43c,#6fc900);
+      box-shadow:0 12px 26px rgba(111,201,0,.25);
+    }
+    .btn-outline{
+      color:#fff;
+      border-color:rgba(255,255,255,.38);
+      background:rgba(255,255,255,.06);
+    }
+
+    /* Header */
+    
+    .topbar{
+        position:absolute;
+        top:28px;
+        left:0;
+        right:0;
+        z-index:20;
+        color:white;
+    }
+
+    .nav{
+        min-height:64px;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:24px;
+        padding:8px 14px;
+        border:1px solid rgba(255,255,255,.12);
+        border-radius:16px;
+        background:rgba(5,18,8,.48);
+        box-shadow:0 12px 30px rgba(0,0,0,.16);
+        backdrop-filter:blur(10px);
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:#fff;
+      text-decoration:none;
+      font-weight:950;
+    }
+
+    .site-logo{
+        width:68px;
+        height:auto;
+        object-fit:contain;
+        filter:drop-shadow(0 8px 18px rgba(0,0,0,.28));
+    }
+
+    .desktop-nav{
+      display:flex;
+      align-items:center;
+      gap:2px;
+    }
+
+    .desktop-nav a{
+        padding:9px 11px;
+        border-radius:10px;
+        color:rgba(255,255,255,.86);
+        text-decoration:none;
+        font-size:.9rem;
+        font-weight:800;
+    }
+
+    .desktop-nav a:hover{
+      color:#fff;
+      background:rgba(255,255,255,.08);
+    }
+
+    .phone-nav{
+        margin-left:10px;
+        padding:10px 14px !important;
+        border:1px solid rgba(145,223,39,.5);
+        background:rgba(116,201,0,.12);
+    }
+
+    .menu-btn{
+      display:none;
+      width:42px;
+      height:42px;
+      border:1px solid rgba(255,255,255,.22);
+      border-radius:10px;
+      color:#fff;
+      background:rgba(0,0,0,.22);
+    }
+
+    .mobile-nav{display:none}
+
+    /* Hero */
+    .hero{
+      min-height:540px;
+      display:flex;
+      align-items:center;
+      color:#fff;
+      background:
+        linear-gradient(90deg,rgba(4,18,7,.88),rgba(4,18,7,.57) 48%,rgba(4,18,7,.14) 75%),
+        url("assets/lawn-2.jpg") center/cover no-repeat;
+    }
+
+    .hero-content{
+        max-width:610px;
+        padding:175px 0 58px;
+    }
+
+    .hero h1{
+        max-width:600px;
+        margin:0;
+        font-size:clamp(2.5rem,4.5vw,4.25rem);
+        line-height:.95;
+        letter-spacing:-.055em;
+    }
+
+    .hero h1 span{color:#91df27}
+
+    .hero p{
+      max-width:560px;
+      margin:18px 0 0;
+      color:rgba(255,255,255,.82);
+      font-size:1rem;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:24px;
+    }
+
+    .hero-points{
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px 24px;
+      margin-top:24px;
+      color:rgba(255,255,255,.83);
+      font-size:.85rem;
+      font-weight:800;
+    }
+
+    .hero-points span::before{
+      content:"✓";
+      display:inline-grid;
+      place-items:center;
+      width:20px;
+      height:20px;
+      margin-right:7px;
+      border-radius:50%;
+      color:#173508;
+      background:#92df2d;
+    }
+
+    /* Services */
+    .services{background:#fff}
+
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(6,1fr);
+      gap:12px;
+    }
+
+    .service-card{
+      padding:22px 15px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      text-align:center;
+      background:#fff;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .service-icon{
+      display:grid;
+      place-items:center;
+      width:46px;
+      height:46px;
+      margin:0 auto 14px;
+      border-radius:14px;
+      color:var(--green-dark);
+      background:var(--green-soft);
+      font-weight:950;
+    }
+
+    .service-card h3{
+      margin:0 0 8px;
+      color:var(--ink);
+      font-size:.96rem;
+      line-height:1.25;
+    }
+
+    .service-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:.82rem;
+    }
+
+    /* About */
+    .about{background:var(--soft)}
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr 1.1fr .55fr;
+      gap:28px;
+      align-items:center;
+    }
+
+    .about-image{
+      min-height:340px;
+      overflow:hidden;
+      border-radius:18px;
+      box-shadow:var(--shadow);
+    }
+
+    .about-image img{
+      height:100%;
+      min-height:340px;
+      object-fit:cover;
+    }
+
+    .about-copy h2{
+      font-size:clamp(2rem,3.7vw,3.25rem);
+    }
+
+    .about-copy p{
+      margin:15px 0 0;
+      color:var(--muted);
+    }
+
+    .about-actions{margin-top:22px}
+
+    .about-features{
+      display:grid;
+      gap:14px;
+    }
+
+    .feature-box{
+      display:flex;
+      align-items:center;
+      gap:11px;
+      padding:16px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:#fff;
+      box-shadow:var(--shadow-soft);
+      color:var(--ink);
+      font-weight:850;
+      font-size:.9rem;
+    }
+
+    .feature-box i{
+      display:grid;
+      place-items:center;
+      width:34px;
+      height:34px;
+      flex:0 0 auto;
+      border-radius:10px;
+      color:var(--green-dark);
+      background:var(--green-soft);
+      font-style:normal;
+    }
+
+    /* Gallery */
+    .gallery{background:linear-gradient(180deg,#fff,#f4f8ef)}
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:12px;
+    }
+
+    .gallery-item{
+      overflow:hidden;
+      border-radius:15px;
+      box-shadow:var(--shadow-soft);
+      background:#fff;
+    }
+
+    .gallery-item img{
+      height:170px;
+      object-fit:cover;
+      transition:.3s ease;
+    }
+
+    .gallery-item:hover img{transform:scale(1.04)}
+
+    /* Reviews */
+    .reviews{background:#fff}
+
+    .review-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .review-card{
+      position:relative;
+      padding:26px 28px;
+      text-align:center;
+      border-top:1px solid var(--line);
+    }
+
+    .quote{
+      color:var(--green);
+      font-size:2rem;
+      font-weight:950;
+      line-height:1;
+    }
+
+    .review-card p{
+      margin:8px 0 14px;
+      color:var(--text);
+    }
+
+    .stars{
+      color:#efb400;
+      letter-spacing:.08em;
+      font-size:.85rem;
+    }
+
+    .review-card strong{
+      display:block;
+      margin-top:6px;
+      color:var(--ink);
+    }
+
+    /* Contact */
+    .contact{
+      padding:0;
+      background:#fff;
+    }
+
+    .contact-banner{
+      display:grid;
+      grid-template-columns:1fr auto auto;
+      gap:18px;
+      align-items:center;
+      padding:28px 34px;
+      color:#fff;
+      background:
+        linear-gradient(90deg,rgba(5,20,8,.92),rgba(12,51,16,.86)),
+        url("assets/lawn-1.jpg") center/cover no-repeat;
+    }
+
+    .contact-copy h2{
+      font-size:clamp(1.7rem,3vw,2.65rem);
+      color:#fff;
+    }
+
+    .contact-copy p{
+      margin:5px 0 0;
+      color:rgba(255,255,255,.72);
+    }
+
+    .contact-details{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .contact-details a{
+      min-width:200px;
+    }
+
+    .estimate-form-wrap{
+      padding:48px 0 60px;
+      background:#f8faf7;
+    }
+
+    .estimate-form{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+      max-width:860px;
+      margin:0 auto;
+      padding:28px;
+      border:1px solid var(--line);
+      border-radius:20px;
+      background:#fff;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .field.full{grid-column:1/-1}
+
+    .field label{
+      display:block;
+      margin-bottom:6px;
+      color:var(--ink);
+      font-size:.84rem;
+      font-weight:850;
+    }
+
+    .field input,
+    .field select,
+    .field textarea{
+      width:100%;
+      padding:12px 13px;
+      border:1px solid #dfe6dd;
+      border-radius:10px;
+      color:var(--ink);
+      outline:none;
+      background:#fff;
+    }
+
+    .field textarea{
+      min-height:120px;
+      resize:vertical;
+    }
+
+    .submit{
+      grid-column:1/-1;
+      width:100%;
+      border:0;
+      cursor:pointer;
+    }
+
+    .success{
+      display:flex;
+      align-items:flex-start;
+      gap:14px;
+      max-width:860px;
+      margin:0 auto;
+      padding:24px;
+      border:1px solid #d6efbd;
+      border-radius:18px;
+      background:#f1fae8;
+      color:var(--ink);
+    }
+
+    .success[hidden]{display:none}
+
+    .success-icon{
+      display:grid;
+      place-items:center;
+      width:42px;
+      height:42px;
+      flex:0 0 auto;
+      border-radius:50%;
+      color:#173508;
+      background:#91df2d;
+      font-weight:950;
+    }
+
+    .success h3,.success p{margin:0}
+    .success p{color:var(--muted)}
+
+    /* Footer */
+    footer{
+      padding:28px 0;
+      color:#aab4aa;
+      background:#08140b;
+    }
+
+    .footer-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .footer-brand{color:#fff;font-weight:950}
+    .footer-links{display:flex;flex-wrap:wrap;gap:15px}
+    .footer-links a{text-decoration:none}
+    .footer-links a:hover{color:#fff}
+
+    @media(max-width:1050px){
+      .service-grid{grid-template-columns:repeat(3,1fr)}
+      .about-grid{grid-template-columns:1fr 1fr}
+      .about-features{grid-column:1/-1;grid-template-columns:repeat(3,1fr)}
+      .gallery-grid{grid-template-columns:repeat(3,1fr)}
+    }
+
+    @media(max-width:820px){
+      .desktop-nav{display:none}
+      .menu-btn{display:grid;place-items:center}
+      .mobile-nav{
+        position:absolute;
+        top:74px;
+        left:20px;
+        right:20px;
+        padding:10px;
+        border-radius:14px;
+        background:rgba(6,22,9,.97);
+        box-shadow:0 20px 40px rgba(0,0,0,.25);
+      }
+      .mobile-nav.open{display:grid}
+      .mobile-nav a{
+        padding:11px;
+        color:#fff;
+        text-decoration:none;
+        font-weight:850;
+      }
+      .about-grid{grid-template-columns:1fr}
+      .about-features{grid-column:auto;grid-template-columns:1fr 1fr 1fr}
+      .review-grid{grid-template-columns:1fr}
+      .contact-banner{grid-template-columns:1fr}
+    }
+
+    @media(max-width:620px){
+      .site-wrap{
+        width:100%;
+        margin:0;
+        border-radius:0;
+      }
+
+      .container{width:min(calc(100% - 28px),var(--max))}
+      .hero{min-height:650px;background-position:58% center}
+      .hero-content{padding-top:120px}
+      .service-grid{grid-template-columns:1fr 1fr}
+      .gallery-grid{grid-template-columns:1fr 1fr}
+      .about-features{grid-template-columns:1fr}
+      .estimate-form{grid-template-columns:1fr}
+      .field.full,.submit{grid-column:auto}
+      .contact-banner{padding:26px 22px}
+      .contact-details{flex-direction:column}
+      .contact-details a{width:100%}
+      .footer-inner{align-items:flex-start;flex-direction:column}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site-wrap">
+    <header class="topbar">
+      <div class="container nav">
+        <a class="brand" href="#top" aria-label="NKY Perfect Cuts home">
+            <img
+              class="site-logo"
+              src="assets/logo.png"
+              alt="NKY Perfect Cuts LLC"
+            />
+          </a>
+
+        <nav class="desktop-nav">
+          <a href="#services">Services</a>
+          <a href="#about">About Us</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+          <a class="phone-nav" href="tel:+18598149532">☎ (859) 814-9532</a>
+        </nav>
+
+        <button class="menu-btn" id="menuButton" type="button">☰</button>
+
+        <nav class="mobile-nav" id="mobileNav">
+          <a href="#services">Services</a>
+          <a href="#about">About Us</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+          <a href="tel:+18598149532">Call (859) 814-9532</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <div class="container">
+          <div class="hero-content">
+            <h1>
+              Northern Kentucky’s trusted
+              <span>lawn care professionals.</span>
+            </h1>
+
+            <p>
+              Reliable lawn care, landscaping, and seasonal services that keep
+              your property looking its best all year long.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#contact">Get a Free Estimate</a>
+              <a class="btn btn-outline" href="tel:+18598149532">Call (859) 814-9532</a>
+            </div>
+
+            <div class="hero-points">
+              <span>Reliable &amp; insured</span>
+              <span>Quality work every time</span>
+              <span>Locally owned</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="container about-grid">
+          <div class="about-image">
+            <img src="assets/landscape.jpg" alt="Landscape work by NKY Perfect Cuts">
+          </div>
+
+          <div class="about-copy">
+            <div class="eyebrow">About Us</div>
+            <h2>Local. Reliable. Committed to quality.</h2>
+
+            <p>
+              NKY Perfect Cuts LLC is a locally owned lawn care company serving
+              Northern Kentucky. We are committed to providing high-quality service
+              with attention to detail and a focus on customer satisfaction.
+            </p>
+
+            <div class="about-actions">
+              <a class="btn btn-primary" href="#contact">Learn More About Us</a>
+            </div>
+          </div>
+
+          <div class="about-features">
+            <div class="feature-box"><i>⌂</i> Locally owned &amp; operated</div>
+            <div class="feature-box"><i>✓</i> Reliable service</div>
+            <div class="feature-box"><i>★</i> Satisfaction focused</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section services" id="services">
+        <div class="container">
+          <div class="section-heading">
+            <div class="eyebrow">Our Services</div>
+            <h2>Complete lawn &amp; landscape care.</h2>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card">
+              <div class="service-icon">✂</div>
+              <h3>Lawn Mowing</h3>
+              <p>Professional mowing, trimming, edging, and cleanup.</p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">⌂</div>
+              <h3>Landscape Design</h3>
+              <p>Custom updates that improve beauty and curb appeal.</p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">↺</div>
+              <h3>Spring &amp; Fall Cleanup</h3>
+              <p>Seasonal cleanup to keep your property neat.</p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">◒</div>
+              <h3>Mulch Installation</h3>
+              <p>Fresh mulch that improves appearance and protects beds.</p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">✿</div>
+              <h3>Shrub Trimming</h3>
+              <p>Clean shaping that keeps shrubs healthy and attractive.</p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">＋</div>
+              <h3>Other Services</h3>
+              <p>Aeration, overseeding, snow removal, and more.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section gallery" id="gallery">
+        <div class="container">
+          <div class="section-heading">
+            <div class="eyebrow">Our Work</div>
+            <h2>Proud of every lawn we care for.</h2>
+          </div>
+
+          <div class="gallery-grid">
+            <div class="gallery-item"><img src="assets/lawn-1.jpg" alt="Striped backyard lawn"></div>
+            <div class="gallery-item"><img src="assets/landscape.jpg" alt="Mulch and landscape bed"></div>
+            <div class="gallery-item"><img src="assets/lawn-2.jpg" alt="Freshly mowed lawn"></div>
+            <div class="gallery-item"><img src="assets/aeration.jpg" alt="Aeration and overseeding service"></div>
+            <div class="gallery-item"><img src="assets/patio.jpg" alt="Outdoor landscape space"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reviews" id="reviews">
+        <div class="container">
+          <div class="section-heading">
+            <div class="eyebrow">What Our Clients Say</div>
+            <h2>Trusted by homeowners across NKY.</h2>
+          </div>
+
+          <div class="review-grid">
+            <article class="review-card">
+              <div class="quote">“</div>
+              <p>
+                Love Eddie and his team. Very friendly, professional, quick and meticulous.
+                It’s been such a relief to leave the lawn care to the professionals.
+              </p>
+              <div class="stars">★★★★★</div>
+              <strong>Swapna Mony</strong>
+            </article>
+
+            <article class="review-card">
+              <div class="quote">“</div>
+              <p>
+                NKY Perfect Cuts LLC just did landscaping around our new shed.
+                We are very impressed with the work they performed.
+              </p>
+              <div class="stars">★★★★★</div>
+              <strong>Michael Turner</strong>
+            </article>
+
+            <article class="review-card">
+              <div class="quote">“</div>
+              <p>
+                They did a great job! Kept us in the loop the entire time too.
+                They were quick as well!
+              </p>
+              <div class="stars">★★★★★</div>
+              <strong>Heyla Lopez</strong>
+            </article>
+
+            <article class="review-card">
+                <div class="quote">“</div>
+                <p>
+                    I have been using NKY Perfect Cuts for three years, and am extremely pleased with their services. Marco and his crew do a great job maintaining my yard, even on the steep slope. I love the fancy stripes they leave on my grass. My neighbors now use them too. Highly recommended!
+                </p>
+                <div class="stars">★★★★★</div>
+                <strong>Ann Wolfgram</strong>
+            </article>
+
+            <article class="review-card">
+                <div class="quote">“</div>
+                <p>
+                    They did a wonderful job on my fence. Done quickly and friendly to talk to
+                </p>
+                <div class="stars">★★★★★</div>
+                <strong>John Groh</strong>
+            </article>
+
+            <article class="review-card">
+                <div class="quote">“</div>
+                <p>
+                    NKY Perfect Cuts is the absolute best in lawn care! Our yard is very difficult to cut and maintain. They do an excellent job every single time! I highly recommend this company!!
+                </p>
+                <div class="stars">★★★★★</div>
+                <strong>Robin Renee Fischer</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="contact-banner">
+          <div class="contact-copy">
+            <h2>Ready for a lawn you’ll love?</h2>
+            <p>Contact us today for your free estimate.</p>
+          </div>
+
+          <div class="contact-details">
+            <a class="btn btn-primary" href="tel:+18598149532">Call (859) 814-9532</a>
+          </div>
+
+          <div class="contact-details">
+            <a class="btn btn-outline" href="#estimate">Get a Free Estimate</a>
+          </div>
+        </div>
+
+        <div class="estimate-form-wrap" id="estimate">
+          <div class="container">
+            <form class="estimate-form" id="contactForm" action="https://formsubmit.co/ajax/NKYPERFECTCUTS@YAHOO.COM" method="POST">
+              <input type="hidden" name="_subject" value="New NKY Perfect Cuts Estimate Request">
+              <input type="hidden" name="_captcha" value="false">
+
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required="">
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="Best number" required="">
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com">
+              </div>
+
+              <div class="field">
+                <label for="service">Service Needed</label>
+                <select id="service" name="service" required="">
+                  <option value="">Choose a service</option>
+                  <option>Lawn Mowing</option>
+                  <option>Landscaping</option>
+                  <option>Mulch Installation</option>
+                  <option>Shrub Trimming</option>
+                  <option>Aeration &amp; Overseeding</option>
+                  <option>Spring or Fall Cleanup</option>
+                  <option>Snow Removal</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="field full">
+                <label for="message">How can we help?</label>
+                <textarea id="message" name="message" placeholder="Tell us what you need." required=""></textarea>
+              </div>
+
+              <button class="btn btn-primary submit" type="submit">
+                Request Free Estimate
+              </button>
+            </form>
+
+            <div class="success" id="formSuccess" hidden="">
+              <div class="success-icon">✓</div>
+              <div>
+                <h3>Request received!</h3>
+                <p>Thank you. NKY Perfect Cuts will be in touch soon.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <div>
+          <div class="footer-brand">NKY Perfect Cuts LLC</div>
+          <div>Lawn care and landscaping across Northern Kentucky.</div>
+        </div>
+
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div>© <span id="year">2026</span> NKY Perfect Cuts LLC.</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const mobileNav = document.getElementById("mobileNav");
+    const contactForm = document.getElementById("contactForm");
+    const formSuccess = document.getElementById("formSuccess");
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = mobileNav.classList.toggle("open");
+      menuButton.textContent = isOpen ? "×" : "☰";
+    });
+
+    mobileNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileNav.classList.remove("open");
+        menuButton.textContent = "☰";
+      });
+    });
+
+    contactForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const submitButton = contactForm.querySelector(".submit");
+      const originalText = submitButton.textContent;
+
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending...";
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: "POST",
+          body: new FormData(contactForm),
+          headers: { Accept: "application/json" }
+        });
+
+        if (!response.ok) throw new Error("Submission failed");
+
+        contactForm.reset();
+        contactForm.hidden = true;
+        formSuccess.hidden = false;
+      } catch (error) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalText;
+        alert("Sorry, your request could not be sent. Please call (859) 814-9532.");
+      }
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+

@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "Williams Digital Group",
+			"path": "."
+		},
+		{
+			"name": "assets",
+			"path": "../../Downloads/williams-digital-group/assets"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Williams Digital Group"
+	}
+}
