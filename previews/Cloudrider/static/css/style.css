@@ -1,0 +1,3172 @@
+    :root {
+        --black: #03070a;
+        --black-soft: #091117;
+        --panel: #101a21;
+        --white: #ffffff;
+        --light: #f5f7f9;
+        --blue: #11b8ff;
+        --blue-dark: #078fc8;
+        --gray: #aab5bd;
+        --dark-text: #131a20;
+        --line: #25333d;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+
+        font-family:
+            Arial,
+            Helvetica,
+            sans-serif;
+
+        background: var(--black);
+        color: var(--white);
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+    }
+
+
+    /* HEADER */
+
+    .site-header {
+        position: fixed;
+
+        top: 0;
+        left: 0;
+        right: 0;
+
+        z-index: 1000;
+
+        background: rgba(3, 7, 10, .82);
+
+        backdrop-filter: blur(14px);
+
+        border-bottom:
+            1px solid rgba(255,255,255,.07);
+    }
+
+    .nav-wrap {
+        width: min(1500px, 90%);
+
+        margin: auto;
+
+        min-height: 92px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+    
+    .site-logo {
+        display: block;
+    
+        width: auto;
+        height: 68px;
+    
+        object-fit: contain;
+    
+        transition: transform .2s ease;
+    }
+    
+    .site-logo:hover {
+        transform: scale(1.02);
+    }
+
+    .main-nav {
+        display: flex;
+        align-items: center;
+
+        gap: 28px;
+
+        font-size: 12px;
+
+        font-weight: 700;
+
+        letter-spacing: .08em;
+
+        text-transform: uppercase;
+    }
+
+    .nav-button {
+        border:
+            1px solid var(--blue);
+
+        padding:
+            11px 17px;
+
+        border-radius: 4px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 790px;
+
+        position: relative;
+
+        display: flex;
+        align-items: center;
+
+        background:
+            url("/static/images/hero.jpeg")
+            center / cover
+            no-repeat;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        inset: 0;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(3,7,10,.88) 0%,
+                rgba(3,7,10,.60) 40%,
+                rgba(3,7,10,.08) 72%,
+                rgba(3,7,10,.12) 100%
+            );
+    }
+
+    .hero-content {
+        position: relative;
+
+        z-index: 2;
+
+        width: min(820px, 88%);
+
+        margin-left: 6vw;
+
+        padding-top: 80px;
+    }
+
+    .hero-badge,
+    .section-label {
+        font-size: 12px;
+
+        font-weight: 900;
+
+        letter-spacing: .15em;
+
+        text-transform: uppercase;
+    }
+
+    .hero-badge,
+    .blue {
+        color: var(--blue);
+    }
+
+    .hero h1 {
+        margin:
+            18px 0 25px;
+
+        font-size:
+            clamp(58px, 7.5vw, 110px);
+
+        line-height: .9;
+
+        letter-spacing: -.06em;
+
+        text-transform: uppercase;
+    }
+
+    .hero h1 span {
+        display: block;
+
+        color: var(--blue);
+    }
+
+    .hero-copy {
+        max-width: 650px;
+
+        color: #d7dde2;
+
+        font-size: 18px;
+
+        line-height: 1.65;
+    }
+
+    .hero-buttons {
+        display: flex;
+
+        gap: 14px;
+
+        margin-top: 30px;
+    }
+
+
+    /* BUTTONS */
+
+    .button {
+        display: inline-flex;
+
+        align-items: center;
+        justify-content: center;
+
+        min-height: 50px;
+
+        padding:
+            0 24px;
+
+        border-radius: 4px;
+
+        font-size: 12px;
+
+        font-weight: 900;
+
+        letter-spacing: .07em;
+
+        text-transform: uppercase;
+
+        transition:
+            .2s ease;
+    }
+
+    .button-primary {
+        background: var(--blue);
+
+        color: #041018;
+    }
+
+    .button-primary:hover {
+        background: #43caff;
+    }
+
+    .button-outline {
+        border:
+            1px solid rgba(255,255,255,.72);
+    }
+
+    .button-outline:hover {
+        background:
+            rgba(255,255,255,.08);
+    }
+
+    .button-dark {
+        background: var(--black);
+
+        color: white;
+    }
+
+
+    /* PROOF STRIP */
+
+    .proof-strip {
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        background: #050a0e;
+
+        border-top:
+            1px solid #152029;
+
+        border-bottom:
+            1px solid #152029;
+    }
+
+    .proof-item {
+        padding:
+            28px 30px;
+
+        text-align: center;
+
+        border-right:
+            1px solid #152029;
+    }
+
+    .proof-item:last-child {
+        border-right: none;
+    }
+
+    .proof-item strong {
+        display: block;
+
+        color: var(--blue);
+
+        font-size: 35px;
+    }
+
+    .proof-item span {
+        display: block;
+
+        margin-top: 6px;
+
+        color: #aeb8c0;
+
+        font-size: 11px;
+
+        letter-spacing: .07em;
+
+        text-transform: uppercase;
+    }
+
+
+    /* INTRO */
+
+    .home-intro {
+        display: grid;
+
+        grid-template-columns:
+            .9fr 1.1fr;
+
+        gap: 70px;
+
+        align-items: center;
+
+        padding:
+            105px 7vw;
+
+        background: var(--light);
+
+        color: var(--dark-text);
+    }
+
+    .home-intro h2,
+    .training-teaser h2,
+    .ownership-teaser h2,
+    .experience-banner h2,
+    .final-cta h2 {
+        margin:
+            14px 0 24px;
+
+        font-size:
+            clamp(42px, 5vw, 72px);
+
+        line-height: .96;
+
+        letter-spacing: -.05em;
+
+        text-transform: uppercase;
+    }
+
+    .home-intro h2 span {
+        color: var(--blue-dark);
+    }
+
+    .home-intro p {
+        max-width: 620px;
+
+        color: #59646d;
+
+        font-size: 18px;
+
+        line-height: 1.75;
+    }
+
+    .home-intro-image img {
+        height: 520px;
+
+        object-fit: cover;
+
+        border-radius: 7px;
+    }
+
+    .text-link {
+        display: inline-block;
+
+        margin-top: 14px;
+
+        color: var(--blue-dark);
+
+        font-weight: 900;
+    }
+
+
+    /* TRAINING */
+
+    .training-teaser {
+        position: relative;
+
+        padding:
+            110px 7vw;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(3,7,10,.97),
+                rgba(3,7,10,.82)
+            ),
+            url("/static/images/flight-field.jpeg")
+            center / cover
+            no-repeat;
+    }
+
+    .training-teaser-inner {
+        max-width: 810px;
+    }
+
+    .training-teaser p {
+        max-width: 680px;
+
+        color: #c1cbd2;
+
+        font-size: 18px;
+
+        line-height: 1.7;
+    }
+
+    .teaser-points {
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 20px;
+
+        margin:
+            35px 0;
+    }
+
+    .teaser-points div {
+        padding-top: 20px;
+
+        border-top:
+            1px solid var(--line);
+    }
+
+    .teaser-points strong {
+        display: block;
+
+        margin-bottom: 8px;
+
+        color: white;
+    }
+
+    .teaser-points span {
+        color: #9fabb4;
+
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+
+    /* OWNERSHIP */
+
+    .ownership-teaser {
+        display: grid;
+
+        grid-template-columns:
+            .9fr 1.1fr;
+
+        gap: 70px;
+
+        align-items: center;
+
+        padding:
+            100px 7vw;
+
+        background: white;
+
+        color: var(--dark-text);
+    }
+
+    .ownership-copy p {
+        max-width: 590px;
+
+        color: #59646d;
+
+        font-size: 18px;
+
+        line-height: 1.7;
+    }
+
+    .ownership-price {
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 16px;
+    }
+
+    .mini-price-card {
+        padding: 30px;
+
+        background: var(--light);
+
+        border:
+            1px solid #dde4e8;
+
+        border-radius: 7px;
+    }
+
+    .mini-price-card span {
+        display: block;
+
+        color: #66717a;
+
+        font-size: 13px;
+
+        font-weight: 700;
+
+        text-transform: uppercase;
+    }
+
+    .mini-price-card strong {
+        display: block;
+
+        margin-top: 6px;
+
+        color: var(--dark-text);
+
+        font-size: 42px;
+    }
+
+    /* FINAL CTA */
+
+    .final-cta {
+        padding:
+            100px 7vw;
+
+        text-align: center;
+
+        background: #061018;
+    }
+
+    .final-cta p {
+        color: #aeb8c0;
+
+        font-size: 18px;
+
+        margin-bottom: 30px;
+    }
+
+
+    /* FOOTER */
+
+    .site-footer {
+        background: #020507;
+
+        color: #89959e;
+    }
+
+    .footer-wrap {
+        width: min(1500px, 86%);
+
+        margin: auto;
+
+        padding:
+            45px 0;
+
+        display: flex;
+        justify-content: space-between;
+
+        gap: 40px;
+    }
+
+    .footer-brand strong {
+        color: white;
+
+        font-size: 18px;
+    }
+
+    .footer-links {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 24px;
+
+        font-size: 12px;
+
+        text-transform: uppercase;
+
+        letter-spacing: .06em;
+    }
+
+    .footer-bottom {
+        border-top:
+            1px solid #152029;
+
+        padding:
+            18px 7vw;
+
+        font-size: 11px;
+
+        color: #66727b;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 950px) {
+
+        .main-nav a:not(.nav-button) {
+            display: none;
+        }
+
+        .home-intro,
+        .ownership-teaser {
+            grid-template-columns: 1fr;
+        }
+
+        .teaser-points {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+
+    @media (max-width: 650px) {
+
+        .nav-wrap {
+            width: 92%;
+        }
+
+        .hero {
+            min-height: 720px;
+        }
+
+        .hero-content {
+            width: auto;
+
+            margin:
+                0 22px;
+
+            padding-top: 90px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+        }
+
+        .hero-buttons {
+            flex-direction: column;
+        }
+
+        .proof-strip {
+            grid-template-columns: 1fr;
+        }
+
+        .proof-item {
+            border-right: none;
+
+            border-bottom:
+                1px solid #152029;
+        }
+
+        .home-intro,
+        .training-teaser,
+        .ownership-teaser,
+        .final-cta {
+            padding-left: 22px;
+            padding-right: 22px;
+        }
+
+        .ownership-price {
+            grid-template-columns: 1fr;
+        }
+
+        .footer-wrap {
+            flex-direction: column;
+        }
+
+    }
+
+    /* =========================================================
+    INTERNAL PAGE HERO
+    ========================================================= */
+
+    .page-hero {
+        position: relative;
+
+        min-height: 650px;
+
+        display: flex;
+        align-items: center;
+
+        background:
+            url("/static/images/hero.jpeg")
+            center / cover
+            no-repeat;
+    }
+
+    .page-hero-overlay {
+        position: absolute;
+        inset: 0;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(3,7,10,.96) 0%,
+                rgba(3,7,10,.80) 45%,
+                rgba(3,7,10,.24) 100%
+            );
+    }
+
+    .page-hero-content {
+        position: relative;
+        z-index: 2;
+
+        width: min(780px, 88%);
+
+        margin-left: 7vw;
+
+        padding-top: 80px;
+    }
+
+    .page-hero h1 {
+        margin: 15px 0 25px;
+
+        font-size:
+            clamp(54px, 7vw, 96px);
+
+        line-height: .92;
+
+        letter-spacing: -.055em;
+
+        text-transform: uppercase;
+    }
+
+    .page-hero h1 span {
+        color: var(--blue);
+    }
+
+    .page-hero p {
+        max-width: 670px;
+
+        color: #d0d8de;
+
+        font-size: 18px;
+        line-height: 1.7;
+
+        margin-bottom: 30px;
+    }
+
+
+    /* =========================================================
+    AIRCRAFT INTRO
+    ========================================================= */
+
+    .aircraft-intro {
+        display: grid;
+
+        grid-template-columns:
+            .9fr 1.1fr;
+
+        gap: 70px;
+
+        align-items: center;
+
+        padding:
+            100px 7vw;
+
+        background: white;
+
+        color: var(--dark-text);
+    }
+
+    .aircraft-intro h2 {
+        margin:
+            15px 0 25px;
+
+        font-size:
+            clamp(40px, 5vw, 68px);
+
+        line-height: .98;
+
+        letter-spacing: -.05em;
+
+        text-transform: uppercase;
+    }
+
+    .aircraft-intro p {
+        color: #59646d;
+
+        font-size: 18px;
+
+        line-height: 1.7;
+    }
+
+    .aircraft-intro-image img {
+        height: 500px;
+
+        object-fit: cover;
+
+        border-radius: 7px;
+    }
+
+
+    /* =========================================================
+    SPEC OVERVIEW
+    ========================================================= */
+
+    .spec-overview {
+        padding:
+            100px 7vw;
+
+        background: #061018;
+    }
+
+    .centered {
+        text-align: center;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .spec-overview .section-heading {
+        max-width: 800px;
+    }
+
+    .spec-overview h2,
+    .model-section h2,
+    .aircraft-features h2,
+    .aircraft-training-cta h2 {
+        margin:
+            15px 0 25px;
+
+        font-size:
+            clamp(40px, 5vw, 68px);
+
+        line-height: .98;
+
+        letter-spacing: -.05em;
+
+        text-transform: uppercase;
+    }
+
+    .spec-grid {
+        display: grid;
+
+        grid-template-columns:
+            repeat(4, 1fr);
+
+        gap: 1px;
+
+        margin-top: 45px;
+
+        background: #26343e;
+
+        border:
+            1px solid #26343e;
+    }
+
+    .spec-card {
+        padding:
+            35px 25px;
+
+        background: #0a141b;
+
+        text-align: center;
+    }
+
+    .spec-card span {
+        display: block;
+
+        color: #9ea9b1;
+
+        font-size: 11px;
+
+        letter-spacing: .08em;
+
+        text-transform: uppercase;
+    }
+
+    .spec-card strong {
+        display: block;
+
+        margin:
+            10px 0 6px;
+
+        color: white;
+
+        font-size: 29px;
+    }
+
+    .spec-card small {
+        color: var(--blue);
+
+        font-size: 12px;
+    }
+
+
+    /* =========================================================
+    MODEL DETAIL SECTION
+    ========================================================= */
+
+    .model-section {
+        padding:
+            110px 7vw;
+
+        background: var(--light);
+
+        color: var(--dark-text);
+    }
+
+    .model-section .section-heading p {
+        max-width: 750px;
+
+        color: #5d6871;
+
+        font-size: 17px;
+
+        line-height: 1.7;
+    }
+
+    .model-detail-grid {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 20px;
+
+        margin-top: 45px;
+    }
+
+    .model-detail-card {
+        position: relative;
+
+        padding:
+            34px;
+
+        background: white;
+
+        border:
+            1px solid #dae1e6;
+
+        border-radius: 8px;
+
+        box-shadow:
+            0 18px 40px
+            rgba(0,0,0,.05);
+    }
+
+    .model-detail-card.highlighted {
+        border:
+            2px solid var(--blue);
+    }
+
+    .model-popular {
+        position: absolute;
+
+        top: -13px;
+        right: 25px;
+
+        padding:
+            7px 12px;
+
+        background: var(--blue);
+
+        color: #031018;
+
+        border-radius: 3px;
+
+        font-size: 10px;
+
+        font-weight: 900;
+
+        letter-spacing: .08em;
+    }
+
+    .model-top {
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: flex-end;
+
+        gap: 20px;
+
+        margin-bottom: 30px;
+    }
+
+    .model-kicker {
+        display: block;
+
+        margin-bottom: 6px;
+
+        color: var(--blue-dark);
+
+        font-size: 10px;
+
+        font-weight: 900;
+
+        letter-spacing: .1em;
+    }
+
+    .model-top h3 {
+        margin: 0;
+
+        font-size: 28px;
+    }
+
+    .model-price {
+        font-size: 34px;
+
+        font-weight: 900;
+    }
+
+    .model-detail-row {
+        display: flex;
+
+        justify-content: space-between;
+
+        gap: 25px;
+
+        padding:
+            14px 0;
+
+        border-top:
+            1px solid #e3e8eb;
+
+        color: #626e77;
+    }
+
+    .model-detail-row strong {
+        color: #141c22;
+
+        text-align: right;
+    }
+
+    .model-detail-button {
+        width: 100%;
+
+        margin-top: 25px;
+    }
+
+
+    /* =========================================================
+    AIRCRAFT FEATURES
+    ========================================================= */
+
+    .aircraft-features {
+        padding:
+            110px 7vw;
+
+        background: white;
+
+        color: var(--dark-text);
+    }
+
+    .feature-grid {
+        display: grid;
+
+        grid-template-columns:
+            repeat(4, 1fr);
+
+        gap: 18px;
+
+        margin-top: 45px;
+    }
+
+    .feature-card {
+        padding:
+            30px;
+
+        background: var(--light);
+
+        border:
+            1px solid #dce3e7;
+
+        border-radius: 7px;
+    }
+
+    .feature-card > span {
+        color: var(--blue-dark);
+
+        font-size: 13px;
+
+        font-weight: 900;
+    }
+
+    .feature-card h3 {
+        margin:
+            18px 0 12px;
+
+        font-size: 20px;
+    }
+
+    .feature-card p {
+        margin: 0;
+
+        color: #5f6a73;
+
+        line-height: 1.6;
+    }
+
+
+    /* =========================================================
+    AIRCRAFT TRAINING CTA
+    ========================================================= */
+
+    .aircraft-training-cta {
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        gap: 60px;
+
+        padding:
+            90px 7vw;
+
+        background: #071018;
+    }
+
+    .aircraft-training-cta > div {
+        max-width: 850px;
+    }
+
+    .aircraft-training-cta p {
+        max-width: 700px;
+
+        color: var(--gray);
+
+        font-size: 18px;
+
+        line-height: 1.7;
+    }
+
+
+    /* =========================================================
+    AIRCRAFT MOBILE
+    ========================================================= */
+
+    @media (max-width: 950px) {
+
+        .aircraft-intro {
+            grid-template-columns: 1fr;
+        }
+
+        .spec-grid {
+            grid-template-columns:
+                1fr 1fr;
+        }
+
+        .model-detail-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .feature-grid {
+            grid-template-columns:
+                1fr 1fr;
+        }
+
+        .aircraft-training-cta {
+            flex-direction: column;
+
+            align-items: flex-start;
+        }
+
+    }
+
+
+    @media (max-width: 650px) {
+
+        .page-hero-content {
+            margin-left: 22px;
+        }
+
+        .page-hero h1 {
+            font-size: 50px;
+        }
+
+        .aircraft-intro,
+        .spec-overview,
+        .model-section,
+        .aircraft-features,
+        .aircraft-training-cta {
+            padding-left: 22px;
+            padding-right: 22px;
+        }
+
+        .spec-grid,
+        .feature-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .model-top {
+            flex-direction: column;
+
+            align-items: flex-start;
+        }
+
+    }
+
+    /* =========================================================
+    PRICING PAGE
+    ========================================================= */
+
+    .pricing-section {
+        padding: 110px 7vw;
+        background: var(--light);
+        color: var(--dark-text);
+    }
+
+    .pricing-section .section-heading p,
+    .options-section .section-heading p,
+    .landed-cost-section .section-heading p {
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+        color: #5e6972;
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    .pricing-section h2,
+    .import-section h2,
+    .landed-cost-section h2,
+    .options-section h2,
+    .match-section h2,
+    .ownership-support h2 {
+        margin: 15px 0 25px;
+        font-size: clamp(40px, 5vw, 68px);
+        line-height: .98;
+        letter-spacing: -.05em;
+        text-transform: uppercase;
+    }
+
+    .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+        margin-top: 45px;
+    }
+
+    .pricing-card {
+        position: relative;
+        padding: 30px;
+        background: white;
+        border: 1px solid #d9e1e6;
+        border-radius: 8px;
+        box-shadow: 0 16px 38px rgba(0,0,0,.05);
+    }
+
+    .featured-pricing {
+        border: 2px solid var(--blue);
+    }
+
+    .pricing-popular {
+        position: absolute;
+        top: -13px;
+        right: 20px;
+        padding: 7px 12px;
+        background: var(--blue);
+        color: #041018;
+        border-radius: 3px;
+        font-size: 10px;
+        font-weight: 900;
+        letter-spacing: .08em;
+    }
+
+    .pricing-kicker {
+        color: var(--blue-dark);
+        font-size: 10px;
+        font-weight: 900;
+        letter-spacing: .1em;
+    }
+
+    .pricing-card h3 {
+        margin: 8px 0 24px;
+        font-size: 24px;
+    }
+
+    .pricing-amount {
+        font-size: 44px;
+        font-weight: 900;
+        letter-spacing: -.04em;
+    }
+
+    .pricing-note {
+        color: #77828b;
+        font-size: 12px;
+        margin-top: 3px;
+    }
+
+    .pricing-card ul {
+        margin: 25px 0;
+        padding-left: 18px;
+        color: #59656e;
+        line-height: 1.9;
+    }
+
+    .pricing-button {
+        width: 100%;
+    }
+
+
+    /* IMPORT */
+
+    .import-section {
+        display: grid;
+        grid-template-columns: 1fr .8fr;
+        gap: 70px;
+        align-items: center;
+        padding: 105px 7vw;
+        background: linear-gradient(120deg,#048fd0,#10c4ff);
+        color: #00151e;
+    }
+
+    .import-copy p {
+        max-width: 650px;
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+    .import-card {
+        padding: 42px;
+        background: rgba(255,255,255,.96);
+        border-radius: 10px;
+        color: var(--dark-text);
+    }
+
+    .import-card > span {
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: .1em;
+    }
+
+    .import-card > strong {
+        display: block;
+        margin: 10px 0 22px;
+        font-size: 64px;
+        letter-spacing: -.04em;
+    }
+
+    .import-card ul {
+        padding-left: 20px;
+        color: #53606a;
+        line-height: 1.9;
+    }
+
+    .import-card small {
+        display: block;
+        margin-top: 20px;
+        color: #6e7880;
+        line-height: 1.6;
+    }
+
+
+    /* LANDED COST */
+
+    .landed-cost-section {
+        padding: 105px 7vw;
+        background: #071018;
+    }
+
+    .landed-grid {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 1px;
+        margin-top: 45px;
+        background: var(--line);
+        border: 1px solid var(--line);
+    }
+
+    .landed-grid div {
+        padding: 34px 22px;
+        background: #0a141b;
+        text-align: center;
+    }
+
+    .landed-grid span {
+        display: block;
+        color: #9eabb4;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: .07em;
+    }
+
+    .landed-grid strong {
+        display: block;
+        margin: 8px 0;
+        color: white;
+        font-size: 34px;
+    }
+
+    .landed-grid small {
+        color: var(--blue);
+        line-height: 1.5;
+    }
+
+    .landed-disclaimer {
+        max-width: 850px;
+        margin: 24px auto 0;
+        color: #7f8a93;
+        font-size: 12px;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+
+    /* OPTIONS */
+
+    .options-section {
+        padding: 110px 7vw;
+        background: white;
+        color: var(--dark-text);
+    }
+
+    .options-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 45px;
+    }
+
+    .option-card {
+        padding: 25px;
+        background: var(--light);
+        border: 1px solid #dce4e8;
+        border-radius: 7px;
+    }
+
+    .option-card span {
+        display: block;
+        color: #66727b;
+        font-size: 13px;
+    }
+
+    .option-card strong {
+        display: block;
+        margin-top: 7px;
+        font-size: 25px;
+    }
+
+
+    /* PRICE MATCH */
+
+    .match-section {
+        padding: 100px 7vw;
+        background: #061018;
+        text-align: center;
+    }
+
+    .match-inner {
+        max-width: 850px;
+        margin: auto;
+    }
+
+    .match-section p {
+        color: var(--gray);
+        font-size: 18px;
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+
+
+    /* OWNERSHIP SUPPORT */
+
+    .ownership-support {
+        padding: 105px 7vw;
+        background: var(--light);
+        color: var(--dark-text);
+    }
+
+    .ownership-support-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 45px;
+    }
+
+    .ownership-support-grid div {
+        padding: 32px;
+        background: white;
+        border: 1px solid #dbe3e8;
+        border-radius: 7px;
+    }
+
+    .ownership-support-grid span {
+        color: var(--blue-dark);
+        font-weight: 900;
+    }
+
+    .ownership-support-grid h3 {
+        margin: 15px 0 10px;
+        font-size: 21px;
+    }
+
+    .ownership-support-grid p {
+        margin: 0;
+        color: #5d6871;
+        line-height: 1.65;
+    }
+
+
+    /* PRICING MOBILE */
+
+    @media (max-width: 1000px) {
+
+        .pricing-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .import-section {
+            grid-template-columns: 1fr;
+        }
+
+        .landed-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .options-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+    }
+
+    @media (max-width: 650px) {
+
+        .pricing-section,
+        .import-section,
+        .landed-cost-section,
+        .options-section,
+        .match-section,
+        .ownership-support {
+            padding-left: 22px;
+            padding-right: 22px;
+        }
+
+        .pricing-grid,
+        .landed-grid,
+        .options-grid,
+        .ownership-support-grid {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    /* =========================================================
+    TRAINING PAGE
+    ========================================================= */
+
+    .training-difference {
+        display: grid;
+        grid-template-columns: .9fr 1.1fr;
+        gap: 70px;
+        align-items: center;
+        padding: 105px 7vw;
+        background: white;
+        color: var(--dark-text);
+    }
+
+    .training-difference h2,
+    .training-process h2,
+    .real-experience-section h2,
+    .delivery-support-section h2,
+    .why-training-matters h2 {
+        margin: 15px 0 25px;
+        font-size: clamp(40px, 5vw, 68px);
+        line-height: .98;
+        letter-spacing: -.05em;
+        text-transform: uppercase;
+    }
+
+    .training-difference p,
+    .training-process .section-heading p,
+    .real-experience-section p,
+    .delivery-support-section p {
+        color: #5c6871;
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+    .training-difference-image img {
+        height: 520px;
+        object-fit: cover;
+        border-radius: 7px;
+    }
+
+
+    /* PROCESS */
+
+    .training-process {
+        padding: 110px 7vw;
+        background: var(--light);
+        color: var(--dark-text);
+    }
+
+    .training-process .section-heading {
+        max-width: 850px;
+    }
+
+    .training-step-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+        margin-top: 45px;
+    }
+
+    .training-step {
+        padding: 30px;
+        background: white;
+        border: 1px solid #dce3e7;
+        border-radius: 7px;
+    }
+
+    .training-step span {
+        color: var(--blue-dark);
+        font-size: 13px;
+        font-weight: 900;
+    }
+
+    .training-step h3 {
+        margin: 16px 0 10px;
+        font-size: 21px;
+    }
+
+    .training-step p {
+        margin: 0;
+        color: #5f6a73;
+        line-height: 1.65;
+    }
+
+
+    /* REAL EXPERIENCE */
+
+    .real-experience-section {
+        padding: 110px 7vw;
+        background: #071018;
+    }
+
+    .real-experience-inner {
+        max-width: 1000px;
+    }
+
+    .real-experience-section p {
+        max-width: 780px;
+        color: var(--gray);
+    }
+
+    .experience-points {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .experience-points div {
+        padding-top: 22px;
+        border-top: 1px solid var(--line);
+    }
+
+    .experience-points strong {
+        display: block;
+        margin-bottom: 8px;
+        color: white;
+    }
+
+    .experience-points span {
+        color: #9ba7b0;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+
+    /* DELIVERY SUPPORT */
+
+    .delivery-support-section {
+        display: grid;
+        grid-template-columns: .9fr 1.1fr;
+        gap: 70px;
+        align-items: start;
+        padding: 105px 7vw;
+        background: white;
+        color: var(--dark-text);
+    }
+
+    .delivery-support-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+    }
+
+    .delivery-support-list div {
+        padding: 28px;
+        background: var(--light);
+        border: 1px solid #dce4e8;
+        border-radius: 7px;
+    }
+
+    .delivery-support-list span {
+        color: var(--blue-dark);
+        font-weight: 900;
+    }
+
+    .delivery-support-list strong {
+        display: block;
+        margin: 12px 0 8px;
+        font-size: 19px;
+    }
+
+    .delivery-support-list p {
+        margin: 0;
+        color: #5c6871;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+
+    /* WHY TRAINING MATTERS */
+
+    .why-training-matters {
+        padding: 105px 7vw;
+        background: var(--light);
+        color: var(--dark-text);
+    }
+
+    .why-training-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 45px;
+    }
+
+    .why-training-grid div {
+        padding: 30px;
+        background: white;
+        border: 1px solid #dce3e7;
+        border-radius: 7px;
+    }
+
+    .why-training-grid h3 {
+        margin-top: 0;
+        font-size: 21px;
+    }
+
+    .why-training-grid p {
+        margin-bottom: 0;
+        color: #5f6a73;
+        line-height: 1.65;
+    }
+
+
+    /* TRAINING MOBILE */
+
+    @media (max-width: 950px) {
+
+        .training-difference,
+        .delivery-support-section {
+            grid-template-columns: 1fr;
+        }
+
+        .training-step-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .experience-points,
+        .why-training-grid {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    @media (max-width: 650px) {
+
+        .training-difference,
+        .training-process,
+        .real-experience-section,
+        .delivery-support-section,
+        .why-training-matters {
+            padding-left: 22px;
+            padding-right: 22px;
+        }
+
+        .training-step-grid,
+        .delivery-support-list {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    /* =========================================================
+    ABOUT / WHY CLOUDRIDER
+    ========================================================= */
+
+    .about-story {
+        display: grid;
+        grid-template-columns: .9fr 1.1fr;
+        gap: 70px;
+        align-items: center;
+        padding: 105px 7vw;
+        background: white;
+        color: var(--dark-text);
+    }
+
+    .about-story h2,
+    .credibility-section h2,
+    .manufacturer-section h2,
+    .why-buy-section h2,
+    .about-philosophy h2,
+    .about-cta h2 {
+        margin: 15px 0 25px;
+        font-size: clamp(40px, 5vw, 68px);
+        line-height: .98;
+        letter-spacing: -.05em;
+        text-transform: uppercase;
+    }
+
+    .about-story p,
+    .manufacturer-section p,
+    .about-philosophy p,
+    .about-cta p {
+        color: #5b6670;
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+    .about-story-image img {
+        height: 520px;
+        object-fit: cover;
+        border-radius: 7px;
+    }
+
+
+    /* CREDIBILITY */
+
+    .credibility-section {
+        padding: 105px 7vw;
+        background: #071018;
+    }
+
+    .credibility-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        margin-top: 45px;
+        background: var(--line);
+        border: 1px solid var(--line);
+    }
+
+    .credibility-card {
+        padding: 38px 25px;
+        background: #0a141b;
+        text-align: center;
+    }
+
+    .credibility-card strong {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--blue);
+        font-size: 42px;
+        letter-spacing: -.04em;
+    }
+
+    .credibility-card span {
+        color: #aab4bc;
+        font-size: 12px;
+        line-height: 1.5;
+        text-transform: uppercase;
+        letter-spacing: .06em;
+    }
+
+
+    /* MANUFACTURER */
+
+    .manufacturer-section {
+        padding: 105px 7vw;
+        background: var(--light);
+        color: var(--dark-text);
+    }
+
+    .manufacturer-copy {
+        max-width: 850px;
+        margin: auto;
+        text-align: center;
+    }
+
+
+    /* WHY BUY */
+
+    .why-buy-section {
+        padding: 110px 7vw;
+        background: white;
+        color: var(--dark-text);
+    }
+
+    .why-buy-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 45px;
+    }
+
+    .why-buy-grid div {
+        padding: 30px;
+        background: var(--light);
+        border: 1px solid #dce4e8;
+        border-radius: 7px;
+    }
+
+    .why-buy-grid span {
+        color: var(--blue-dark);
+        font-weight: 900;
+    }
+
+    .why-buy-grid h3 {
+        margin: 15px 0 10px;
+        font-size: 21px;
+    }
+
+    .why-buy-grid p {
+        margin: 0;
+        color: #5c6871;
+        line-height: 1.65;
+    }
+
+
+    /* PHILOSOPHY */
+
+    .about-philosophy {
+        padding: 105px 7vw;
+        background: #071018;
+    }
+
+    .about-philosophy-inner {
+        max-width: 900px;
+    }
+
+    .about-philosophy p {
+        max-width: 780px;
+        color: var(--gray);
+    }
+
+
+    /* CTA */
+
+    .about-cta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+        padding: 90px 7vw;
+        background: var(--light);
+        color: var(--dark-text);
+    }
+
+    .about-cta > div {
+        max-width: 850px;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 950px) {
+
+        .about-story {
+            grid-template-columns: 1fr;
+        }
+
+        .credibility-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .why-buy-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .about-cta {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+    }
+
+    @media (max-width: 650px) {
+
+        .about-story,
+        .credibility-section,
+        .manufacturer-section,
+        .why-buy-section,
+        .about-philosophy,
+        .about-cta {
+            padding-left: 22px;
+            padding-right: 22px;
+        }
+
+        .credibility-grid,
+        .why-buy-grid {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    /* =========================================================
+    CONTACT PAGE - REVISED
+    ========================================================= */
+
+    .contact-main {
+        padding: 110px 7vw;
+
+        background: #f5f7f9;
+
+        color: var(--dark-text);
+    }
+
+    .contact-main-inner {
+        width: min(1450px, 100%);
+
+        margin: 0 auto;
+
+        display: grid;
+
+        grid-template-columns:
+            minmax(0, .82fr)
+            minmax(0, 1.18fr);
+
+        gap: 90px;
+
+        align-items: start;
+    }
+
+
+    /* LEFT */
+
+    .contact-intro h2 {
+        margin: 14px 0 26px;
+
+        font-size:
+            clamp(46px, 5vw, 72px);
+
+        line-height: .94;
+
+        letter-spacing: -.055em;
+
+        text-transform: uppercase;
+    }
+
+    .contact-lead {
+        max-width: 580px;
+
+        margin: 0;
+
+        color: #5b6871;
+
+        font-size: 18px;
+
+        line-height: 1.75;
+    }
+
+
+    .contact-reasons {
+        margin-top: 48px;
+
+        border-top:
+            1px solid #d6dee3;
+    }
+
+
+    .contact-reason {
+        display: grid;
+
+        grid-template-columns:
+            48px 1fr;
+
+        gap: 22px;
+
+        padding: 24px 0;
+
+        border-bottom:
+            1px solid #d6dee3;
+    }
+
+
+    .reason-number {
+        color: var(--blue-dark);
+
+        font-size: 14px;
+
+        font-weight: 900;
+    }
+
+
+    .contact-reason strong {
+        display: block;
+
+        margin-bottom: 7px;
+
+        color: #172027;
+
+        font-size: 18px;
+    }
+
+
+    .contact-reason p {
+        max-width: 470px;
+
+        margin: 0;
+
+        color: #626e77;
+
+        font-size: 15px;
+
+        line-height: 1.65;
+    }
+
+
+
+    /* FORM CARD */
+
+    .contact-card {
+        padding: 46px;
+
+        background:
+            linear-gradient(
+                145deg,
+                #0c171f,
+                #061017
+            );
+
+        border:
+            1px solid #243540;
+
+        border-radius: 12px;
+
+        box-shadow:
+            0 28px 60px
+            rgba(0, 0, 0, .14);
+    }
+
+
+    .contact-card-heading {
+        margin-bottom: 32px;
+    }
+
+
+    .contact-card-heading > span {
+        color: var(--blue);
+
+        font-size: 11px;
+
+        font-weight: 900;
+
+        letter-spacing: .13em;
+
+        text-transform: uppercase;
+    }
+
+
+    .contact-card-heading h3 {
+        margin: 9px 0 8px;
+
+        color: white;
+
+        font-size: 34px;
+
+        letter-spacing: -.03em;
+    }
+
+
+    .contact-card-heading p {
+        margin: 0;
+
+        color: #96a5af;
+
+        line-height: 1.6;
+    }
+
+
+
+    /* ACTUAL FORM */
+
+    .cloudrider-form {
+        width: 100%;
+    }
+
+
+    .form-grid {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 20px;
+    }
+
+
+    .form-field {
+        width: 100%;
+
+        margin-bottom: 20px;
+    }
+
+
+    .form-field label {
+        display: block;
+
+        margin-bottom: 8px;
+
+        color: #c8d2d9;
+
+        font-size: 11px;
+
+        font-weight: 800;
+
+        letter-spacing: .08em;
+
+        text-transform: uppercase;
+    }
+
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+        display: block;
+
+        width: 100%;
+
+        max-width: none;
+
+        margin: 0;
+
+        padding: 14px 15px;
+
+        background: #030a0f;
+
+        border:
+            1px solid #31444f;
+
+        border-radius: 5px;
+
+        outline: none;
+
+        color: white;
+
+        font-family: inherit;
+
+        font-size: 15px;
+
+        line-height: 1.4;
+
+        transition:
+            border-color .18s ease,
+            box-shadow .18s ease;
+    }
+
+
+    .form-field input,
+    .form-field select {
+        height: 49px;
+    }
+
+
+    .form-field textarea {
+        min-height: 135px;
+
+        resize: vertical;
+    }
+
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+        border-color: var(--blue);
+
+        box-shadow:
+            0 0 0 3px
+            rgba(17, 184, 255, .11);
+    }
+
+
+    .form-field textarea::placeholder {
+        color: #687781;
+    }
+
+
+    .contact-submit-new {
+        width: 100%;
+
+        min-height: 54px;
+
+        padding: 0 22px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 14px;
+
+        border: none;
+
+        border-radius: 5px;
+
+        background: var(--blue);
+
+        color: #031018;
+
+        cursor: pointer;
+
+        font-family: inherit;
+
+        font-size: 12px;
+
+        font-weight: 900;
+
+        letter-spacing: .1em;
+
+        text-transform: uppercase;
+
+        transition:
+            transform .18s ease,
+            background .18s ease;
+    }
+
+
+    .contact-submit-new:hover {
+        background: #43caff;
+
+        transform: translateY(-1px);
+    }
+
+
+    .contact-submit-new span {
+        font-size: 19px;
+    }
+
+
+    .form-note {
+        margin: 15px 0 0;
+
+        color: #71808a;
+
+        font-size: 11px;
+
+        line-height: 1.5;
+
+        text-align: center;
+    }
+
+
+
+    /* FLASH MESSAGE */
+
+    .flash-message {
+        margin-bottom: 24px;
+
+        padding: 14px 16px;
+
+        border-radius: 5px;
+
+        color: white;
+
+        font-size: 14px;
+    }
+
+
+    .flash-message.success {
+        background: #116b4b;
+
+        border:
+            1px solid #18865f;
+    }
+
+
+    .flash-message.error {
+        background: #772d2d;
+
+        border:
+            1px solid #993d3d;
+    }
+
+
+
+    /* WHAT HAPPENS NEXT */
+
+    .contact-next {
+        padding: 105px 7vw;
+
+        background: #061018;
+    }
+
+
+    .contact-next-heading {
+        max-width: 850px;
+
+        margin: 0 auto;
+
+        text-align: center;
+    }
+
+
+    .contact-next-heading h2 {
+        margin: 14px 0;
+
+        font-size:
+            clamp(40px, 5vw, 68px);
+
+        line-height: .98;
+
+        letter-spacing: -.05em;
+
+        text-transform: uppercase;
+    }
+
+
+    .contact-next-grid {
+        width: min(1150px, 100%);
+
+        margin: 48px auto 0;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 18px;
+    }
+
+
+    .contact-next-grid > div {
+        padding: 31px;
+
+        background: #0b151c;
+
+        border:
+            1px solid #26353f;
+
+        border-radius: 7px;
+    }
+
+
+    .contact-next-grid span {
+        color: var(--blue);
+
+        font-size: 13px;
+
+        font-weight: 900;
+    }
+
+
+    .contact-next-grid strong {
+        display: block;
+
+        margin: 15px 0 9px;
+
+        color: white;
+
+        font-size: 19px;
+    }
+
+
+    .contact-next-grid p {
+        margin: 0;
+
+        color: #96a3ac;
+
+        font-size: 14px;
+
+        line-height: 1.65;
+    }
+
+
+
+    /* TABLET */
+
+    @media (max-width: 1000px) {
+
+        .contact-main-inner {
+            grid-template-columns: 1fr;
+
+            gap: 55px;
+        }
+
+        .contact-intro {
+            max-width: 800px;
+        }
+
+    }
+
+
+
+    /* MOBILE */
+
+    @media (max-width: 650px) {
+
+        .contact-main,
+        .contact-next {
+            padding-left: 22px;
+
+            padding-right: 22px;
+        }
+
+        .contact-card {
+            padding: 27px 20px;
+        }
+
+        .form-grid {
+            grid-template-columns: 1fr;
+
+            gap: 0;
+        }
+
+        .contact-next-grid {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    /* =========================================================
+   HOMEPAGE VIDEO
+========================================================= */
+
+.flight-video-section{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:90px;
+
+    align-items:center;
+
+    padding:120px 8vw;
+
+    background:#050b10;
+
+}
+
+
+.flight-video-copy h2{
+
+    margin:18px 0 24px;
+
+    font-size:clamp(54px,6vw,92px);
+
+    line-height:.9;
+
+    letter-spacing:-.05em;
+
+    text-transform:uppercase;
+
+}
+
+
+.flight-video-copy h2 span{
+
+    color:var(--blue);
+
+}
+
+
+.flight-video-copy p{
+
+    max-width:620px;
+
+    color:#b7c3ca;
+
+    font-size:19px;
+
+    line-height:1.75;
+
+    margin-bottom:34px;
+
+}
+
+.video-frame-native{
+    width:85%;
+    max-width:430px;
+    margin:0 auto;
+    overflow:hidden;
+    border-radius:16px;
+    box-shadow:
+        0 35px 80px rgba(0,0,0,.45);
+}
+
+
+.flight-video{
+
+    display:block;
+
+    width:100%;
+
+    height:auto;
+
+}
+
+
+
+.video-caption{
+    width:85%;
+    max-width:430px;
+    margin:18px auto 0;
+}
+
+
+.video-caption span{
+
+    display:block;
+
+    color:var(--blue);
+
+    font-size:11px;
+
+    font-weight:900;
+
+    letter-spacing:.14em;
+
+    text-transform:uppercase;
+
+}
+
+
+.video-caption strong{
+
+    display:block;
+
+    margin:8px 0;
+
+    color:white;
+
+    font-size:30px;
+
+    line-height:1.25;
+
+}
+
+
+.video-caption p{
+
+    color:#97a6af;
+
+    margin:0;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+
+@media(max-width:900px){
+
+    .flight-video-section{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+    /* =========================================================
+   HOMEPAGE POLISH
+========================================================= */
+
+
+/* Small pricing clarification */
+.pricing-small-note {
+    margin-top: 14px;
+
+    max-width: 580px;
+
+    color: #7b858d !important;
+
+    font-size: 13px !important;
+
+    line-height: 1.6 !important;
+}
+
+
+/* Temporary video placeholder */
+.video-placeholder {
+    width: 315px;
+
+    min-height: 480px;
+
+    padding: 45px 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #10202a,
+            #050b0f
+        );
+
+    border:
+        1px solid #2c414e;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 35px 80px
+        rgba(0,0,0,.42);
+}
+
+
+.video-play {
+    width: 68px;
+    height: 68px;
+
+    margin-bottom: 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding-left: 4px;
+
+    border:
+        1px solid var(--blue);
+
+    border-radius: 50%;
+
+    color: var(--blue);
+
+    font-size: 23px;
+}
+
+
+.video-placeholder > span {
+    margin-bottom: 9px;
+
+    color: var(--blue);
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: .13em;
+
+    text-transform: uppercase;
+}
+
+
+.video-placeholder > strong {
+    color: white;
+
+    font-size: 24px;
+
+    line-height: 1.2;
+}
+
+
+.video-placeholder > p {
+    margin: 13px 0 0;
+
+    color: #8f9da6;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* Lifestyle image */
+.experience-banner {
+    position: relative;
+
+    min-height: 650px;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+        url("/static/images/experience.jpeg")
+        center / cover
+        no-repeat;
+}
+
+
+.experience-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3,7,10,.74),
+            rgba(3,7,10,.06)
+        );
+}
+
+
+.experience-copy {
+    max-width: 500px;
+
+    margin:
+        -5px 0 26px;
+
+    color: #d2dae0;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+.experience-content {
+    position: relative;
+
+    z-index: 2;
+
+    margin-left: 7vw;
+}
+
+
+@media (max-width: 650px) {
+
+    .video-placeholder {
+        width: min(100%, 315px);
+    }
+
+}
+
+/* =========================================================
+   AIRCRAFT PAGE POLISH
+========================================================= */
+
+.model-price-wrap {
+    text-align: right;
+}
+
+.model-price-wrap > span {
+    display: block;
+    margin-bottom: 3px;
+
+    color: #7a858d;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: .08em;
+
+    text-transform: uppercase;
+}
+
+.model-pricing-link {
+    margin-top: 38px;
+
+    padding-top: 26px;
+
+    border-top: 1px solid #d8e0e5;
+
+    text-align: center;
+}
+
+.model-pricing-link p {
+    margin: 0 0 9px;
+
+    color: #66717a;
+
+    font-size: 14px;
+}
+
+
+@media (max-width: 650px) {
+
+    .model-price-wrap {
+        text-align: left;
+    }
+
+}
+
+/* =========================================================
+   PRICING PAGE POLISH
+========================================================= */
+
+.pricing-summary {
+    margin: 25px 0;
+    border-top: 1px solid #e2e8eb;
+}
+
+.pricing-summary > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #e2e8eb;
+}
+
+.pricing-summary span {
+    color: #68747d;
+    font-size: 13px;
+}
+
+.pricing-summary strong {
+    color: var(--dark-text);
+    font-size: 13px;
+}
+
+
+.pricing-aircraft-link {
+    margin-top: 38px;
+    text-align: center;
+}
+
+.pricing-aircraft-link span {
+    margin-right: 10px;
+
+    color: #69747c;
+    font-size: 13px;
+}
+
+.pricing-aircraft-link a {
+    color: var(--blue-dark);
+
+    font-size: 13px;
+    font-weight: 900;
+}
+
+
+.option-featured {
+    border-color: rgba(7,143,200,.45);
+}
+
+
+.options-note {
+    max-width: 800px;
+
+    margin: 26px 0 0;
+
+    color: #77828a;
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+.ownership-training-link {
+    margin-top: 34px;
+
+    text-align: center;
+}
+
+/* =========================================================
+   TRAINING PAGE POLISH
+========================================================= */
+
+.training-ownership-cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 60px;
+
+    padding: 90px 7vw;
+
+    background:
+        linear-gradient(
+            120deg,
+            #078fc8,
+            #11b8ff
+        );
+
+    color: #031018;
+}
+
+.training-ownership-cta > div {
+    max-width: 800px;
+}
+
+.training-ownership-cta .section-label {
+    color: #031018;
+}
+
+.training-ownership-cta h2 {
+    margin: 14px 0 20px;
+
+    font-size: clamp(40px, 5vw, 68px);
+    line-height: .98;
+
+    letter-spacing: -.05em;
+
+    text-transform: uppercase;
+}
+
+.training-ownership-cta p {
+    max-width: 650px;
+
+    margin: 0;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    color: rgba(3,16,24,.78);
+}
+
+.training-ownership-cta .button-primary {
+    flex-shrink: 0;
+
+    background: #031018;
+    color: white;
+}
+
+
+@media (max-width: 850px) {
+
+    .training-ownership-cta {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .training-ownership-cta {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+}
+
+/* =========================================================
+   ABOUT PAGE POLISH
+========================================================= */
+
+.about-philosophy .button {
+    margin-top: 18px;
+}
+
+
+.about-ownership {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 60px;
+
+    padding: 90px 7vw;
+
+    background:
+        linear-gradient(
+            120deg,
+            #e9eef1,
+            #ffffff
+        );
+
+    color: var(--dark-text);
+}
+
+
+.about-ownership > div {
+    max-width: 850px;
+}
+
+
+.about-ownership h2 {
+    margin: 14px 0 20px;
+
+    font-size: clamp(40px, 5vw, 68px);
+
+    line-height: .98;
+
+    letter-spacing: -.05em;
+
+    text-transform: uppercase;
+}
+
+
+.about-ownership p {
+    max-width: 700px;
+
+    margin: 0;
+
+    color: #5d6871;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+.about-ownership .button {
+    flex-shrink: 0;
+}
+
+
+@media (max-width: 850px) {
+
+    .about-ownership {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .about-ownership {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+}
+
+.footer-logo {
+    display: block;
+
+    width: auto;
+    height: 95px;
+
+    margin-bottom: 18px;
+
+    object-fit: contain;
+}
+
+.footer-brand p {
+    margin: 0;
+
+    color: #89959e;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.nav-button {
+    padding: 12px 20px;
+
+    background: var(--blue);
+
+    border: 1px solid var(--blue);
+    border-radius: 4px;
+
+    color: #031018;
+
+    font-weight: 900;
+}
+
+.nav-button:hover {
+    background: #43caff;
+    border-color: #43caff;
+}
+

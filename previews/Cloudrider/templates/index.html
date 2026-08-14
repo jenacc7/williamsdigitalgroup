@@ -1,0 +1,393 @@
+{% extends "base.html" %}
+
+{% block title %}
+CloudRider Aviation | S-Zero Personal Flying Aircraft
+{% endblock %}
+
+{% block meta_description %}
+Explore CloudRider S-Zero personal flying aircraft with hands-on training, U.S. delivery support, real-world flight experience, and aircraft pricing starting at $59,000.
+{% endblock %}
+
+{% block og_title %}
+CloudRider Aviation | Personal Flight Has Arrived
+{% endblock %}
+
+{% block og_description %}
+Discover the S-Zero personal flying aircraft with real-world flight experience, hands-on training, U.S. delivery support, and ownership options from CloudRider Aviation.
+{% endblock %}
+
+
+{% block content %}
+
+<!-- ======================================================
+     HERO
+======================================================= -->
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            FIRST S-ZERO FLIGHT IN THE UNITED STATES
+        </div>
+
+        <h1>
+            You dreamed<br>
+            about this.
+            <span>Now you can own one.</span>
+        </h1>
+
+        <p class="hero-copy">
+            Personal flight is no longer science fiction.
+            Discover the S-Zero personal flying aircraft with
+            hands-on training, real-world flight experience,
+            and U.S.-based ownership support.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="{{ url_for('aircraft') }}"
+               class="button button-primary">
+                Explore Aircraft
+            </a>
+
+            <a href="{{ url_for('contact') }}"
+               class="button button-outline">
+                Request Information
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     SOCIAL PROOF
+======================================================= -->
+
+<section class="proof-strip">
+
+    <div class="proof-item">
+        <strong>1st</strong>
+        <span>S-Zero Flight in the U.S.</span>
+    </div>
+
+    <div class="proof-item">
+        <strong>18M+</strong>
+        <span>Views in the First Two Weeks</span>
+    </div>
+
+    <div class="proof-item">
+        <strong>50K+</strong>
+        <span>Community Growth During Launch</span>
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     INTRO
+======================================================= -->
+
+<section class="home-intro">
+
+    <div class="home-intro-copy">
+
+        <span class="section-label blue">
+            PERSONAL FLIGHT HAS ARRIVED
+        </span>
+
+        <h2>
+            Not a drone.<br>
+            Not a helicopter.<br>
+            <span>A new kind of freedom.</span>
+        </h2>
+
+        <p>
+            The S-Zero personal flying aircraft combines electric vertical
+            takeoff and landing, intuitive controls, and next-generation
+            aviation technology into one unforgettable machine.
+        </p>
+
+        <a href="{{ url_for('aircraft') }}"
+           class="text-link">
+            Explore the Aircraft →
+        </a>
+
+    </div>
+
+    <div class="home-intro-image">
+
+        <img
+            src="{{ url_for('static', filename='images/flight-field.jpeg') }}"
+            alt="CloudRider S-Zero personal flying aircraft in flight">
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     VIDEO / FLIGHT EXPERIENCE
+======================================================= -->
+
+<section class="flight-video-section">
+
+    <div class="flight-video-copy">
+
+        <span class="section-label blue">
+            EXPERIENCE THE S-ZERO
+        </span>
+
+        <h2>
+            Seeing it<br>
+            changes<br>
+            <span>everything.</span>
+        </h2>
+
+        <p>
+            Videos don't fully capture what it's like to see the S-Zero in flight,
+            but they come close. Watch real footage of the aircraft and experience
+            why personal flight is generating so much excitement.
+        </p>
+
+        <a href="{{ url_for('contact') }}"
+           class="button button-primary">
+            Schedule a Demo
+        </a>
+
+    </div>
+
+
+
+    <div class="flight-video-wrap">
+
+        <div class="video-frame-native">
+
+            <video
+                class="flight-video"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="auto">
+
+                <source
+                    src="{{ url_for('static', filename='videos/szero-flight.mp4') }}"
+                    type="video/mp4">
+
+                Your browser does not support HTML5 video.
+
+            </video>
+
+        </div>
+
+
+        <div class="video-caption">
+
+            <span>
+                REAL AIRCRAFT • REAL FLIGHT
+            </span>
+
+            <strong>
+                The future isn't coming.
+                It's already flying.
+            </strong>
+
+            <p>
+                Watch actual S-Zero flight footage from CloudRider Aviation.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     TRAINING
+======================================================= -->
+
+<section class="training-teaser">
+
+    <div class="training-teaser-inner">
+
+        <span class="section-label blue">
+            THE DIFFERENCE IS EXPERIENCE
+        </span>
+
+        <h2>
+            Learn from someone<br>
+            who has actually flown it.
+        </h2>
+
+        <p>
+            When you purchase through CloudRider Aviation,
+            your ownership experience begins before your aircraft arrives.
+            Train on our equipment first and learn from real S-Zero flight experience.
+        </p>
+
+        <div class="teaser-points">
+
+            <div>
+                <strong>Pre-Delivery Training</strong>
+                <span>
+                    Train on CloudRider equipment before your aircraft arrives.
+                </span>
+            </div>
+
+            <div>
+                <strong>Experienced Pilot Guidance</strong>
+                <span>
+                    Learn from someone with real S-Zero flight experience.
+                </span>
+            </div>
+
+            <div>
+                <strong>Delivery-Day Support</strong>
+                <span>
+                    Get help preparing and setting up your aircraft when it arrives.
+                </span>
+            </div>
+
+        </div>
+
+        <a href="{{ url_for('training') }}"
+           class="button button-primary">
+            Explore Training
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     OWNERSHIP / PRICING
+======================================================= -->
+
+<section class="ownership-teaser">
+
+    <div class="ownership-copy">
+
+        <span class="section-label blue">
+            OWNERSHIP
+        </span>
+
+        <h2>
+            Aircraft pricing<br>
+            starts at $59,000.
+        </h2>
+
+        <p>
+            Choose from multiple S-Zero configurations
+            with clear aircraft pricing, ownership support,
+            and a streamlined U.S. import and express-delivery option.
+        </p>
+
+        <p class="pricing-small-note">
+            U.S. import, customs clearance, applicable tariffs,
+            broker fees, and 7-day air delivery are available
+            as a separate $22,000 package.
+        </p>
+
+        <a href="{{ url_for('pricing') }}"
+           class="button button-dark">
+            View Pricing
+        </a>
+
+    </div>
+
+
+    <div class="ownership-price">
+
+        <div class="mini-price-card">
+            <span>S-Zero Basic</span>
+            <strong>$59K</strong>
+        </div>
+
+        <div class="mini-price-card">
+            <span>S-Zero Plus</span>
+            <strong>$79K</strong>
+        </div>
+
+        <div class="mini-price-card">
+            <span>Max Lite</span>
+            <strong>$99K</strong>
+        </div>
+
+        <div class="mini-price-card">
+            <span>Max</span>
+            <strong>$119K</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     LIFESTYLE
+======================================================= -->
+
+<section class="experience-banner">
+
+    <div class="experience-overlay"></div>
+
+    <div class="experience-content">
+
+        <span class="section-label">
+            PERSONAL FLIGHT
+        </span>
+
+        <h2>
+            Some things have to<br>
+            be experienced.
+        </h2>
+
+        <p class="experience-copy">
+            The view changes when the aircraft is yours.
+        </p>
+
+        <a href="{{ url_for('contact') }}"
+           class="button button-outline">
+            Request Information
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     FINAL CTA
+======================================================= -->
+
+<section class="final-cta">
+
+    <span class="section-label blue">
+        READY TO LEARN MORE?
+    </span>
+
+    <h2>
+        Start your journey into personal flight.
+    </h2>
+
+    <p>
+        Explore available aircraft, ownership options,
+        training, and U.S. delivery support.
+    </p>
+
+    <a href="{{ url_for('contact') }}"
+       class="button button-primary">
+        Contact CloudRider
+    </a>
+
+</section>
+
+{% endblock %}

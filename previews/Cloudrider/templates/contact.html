@@ -1,0 +1,506 @@
+{% extends "base.html" %}
+
+{% block title %}
+Contact CloudRider Aviation | S-Zero Personal Aircraft
+{% endblock %}
+
+{% block meta_description %}
+Contact CloudRider Aviation for S-Zero personal flying aircraft pricing, availability, training, U.S. delivery, demonstrations, and ownership information.
+{% endblock %}
+
+{% block og_title %}
+Request S-Zero Information | CloudRider Aviation
+{% endblock %}
+
+{% block og_description %}
+Talk directly with CloudRider Aviation about S-Zero aircraft availability, pricing, training, delivery, and ownership.
+{% endblock %}
+
+
+{% block content %}
+
+
+<!-- ======================================================
+     HERO
+======================================================= -->
+
+<section class="page-hero contact-page-hero">
+
+    <div class="page-hero-overlay"></div>
+
+    <div class="page-hero-content">
+
+        <span class="section-label blue">
+            REQUEST INFORMATION
+        </span>
+
+        <h1>
+            Your next adventure<br>
+            <span>starts here.</span>
+        </h1>
+
+        <p>
+            Ready to own an S-Zero — or just want to understand what
+            personal flight ownership looks like? Talk directly with the
+            CloudRider Aviation team.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     CONTACT MAIN
+======================================================= -->
+
+<section class="contact-main">
+
+    <div class="contact-main-inner">
+
+
+        <!-- LEFT SIDE -->
+
+        <div class="contact-intro">
+
+            <span class="section-label blue">
+                LET'S TALK
+            </span>
+
+            <h2>
+                Tell us where<br>
+                you are in the journey.
+            </h2>
+
+            <p class="contact-lead">
+                Whether you're ready to purchase or simply researching,
+                we're happy to answer questions about aircraft,
+                pricing, training, delivery, and ownership.
+            </p>
+
+
+            <div class="contact-reasons">
+
+                <div class="contact-reason">
+
+                    <span class="reason-number">
+                        01
+                    </span>
+
+                    <div>
+                        <strong>
+                            Aircraft & Availability
+                        </strong>
+
+                        <p>
+                            Compare models, configurations,
+                            capabilities, and current availability.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-reason">
+
+                    <span class="reason-number">
+                        02
+                    </span>
+
+                    <div>
+                        <strong>
+                            Pricing & Delivery
+                        </strong>
+
+                        <p>
+                            Understand aircraft pricing,
+                            import costs, options, and delivery.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-reason">
+
+                    <span class="reason-number">
+                        03
+                    </span>
+
+                    <div>
+                        <strong>
+                            Training & Ownership
+                        </strong>
+
+                        <p>
+                            Learn about pre-delivery training,
+                            delivery-day support, and becoming
+                            comfortable with your aircraft.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="contact-card">
+
+
+            <div class="contact-card-heading">
+
+                <span>
+                    START A CONVERSATION
+                </span>
+
+                <h3>
+                    Request Information
+                </h3>
+
+                <p>
+                    Complete the form and your request goes directly
+                    to CloudRider Aviation.
+                </p>
+
+            </div>
+
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+
+                {% if messages %}
+
+                    {% for category, message in messages %}
+
+                        <div class="flash-message {{ category }}">
+                            {{ message }}
+                        </div>
+
+                    {% endfor %}
+
+                {% endif %}
+
+            {% endwith %}
+
+
+            <form
+                method="POST"
+                action="{{ url_for('contact') }}"
+                class="cloudrider-form">
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-field">
+
+                        <label for="name">
+                            Name *
+                        </label>
+
+                        <input
+                            id="name"
+                            type="text"
+                            name="name"
+                            autocomplete="name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="email">
+                            Email *
+                        </label>
+
+                        <input
+                            id="email"
+                            type="email"
+                            name="email"
+                            autocomplete="email"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="phone">
+                            Phone *
+                        </label>
+
+                        <input
+                            id="phone"
+                            type="tel"
+                            name="phone"
+                            autocomplete="tel"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="location">
+                            City / State
+                        </label>
+
+                        <input
+                            id="location"
+                            type="text"
+                            name="location"
+                            autocomplete="address-level2">
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="model">
+                            Aircraft of Interest
+                        </label>
+
+                        <select
+                            id="model"
+                            name="model">
+
+                            <option value="Not Sure">
+                                Not Sure Yet
+                            </option>
+
+                            <option value="S-Zero Basic">
+                                S-Zero Basic
+                            </option>
+
+                            <option value="S-Zero Plus">
+                                S-Zero Plus
+                            </option>
+
+                            <option value="Max Lite">
+                                Max Lite
+                            </option>
+
+                            <option value="Max">
+                                Max
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="timeline">
+                            Purchase Timeline
+                        </label>
+
+                        <select
+                            id="timeline"
+                            name="timeline">
+
+                            <option value="Ready Now">
+                                Ready Now
+                            </option>
+
+                            <option value="Within 3 Months">
+                                Within 3 Months
+                            </option>
+
+                            <option value="Within 6 Months">
+                                Within 6 Months
+                            </option>
+
+                            <option value="Researching">
+                                Just Researching
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="form-field">
+
+                    <label for="interest">
+                        Primary Interest
+                    </label>
+
+                    <select
+                        id="interest"
+                        name="interest">
+
+                        <option value="Private Ownership">
+                            Private Ownership
+                        </option>
+
+                        <option value="Recreational Flight">
+                            Recreational Flight
+                        </option>
+
+                        <option value="Waterfront Property">
+                            Lake / Waterfront Property
+                        </option>
+
+                        <option value="Ranch or Property">
+                            Ranch / Large Property
+                        </option>
+
+                        <option value="Commercial">
+                            Commercial Opportunity
+                        </option>
+
+                        <option value="Dealer">
+                            Dealer Opportunity
+                        </option>
+
+                        <option value="Media">
+                            Media / Content
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-field">
+
+                    <label for="message">
+                        What would you like to know?
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Tell us about your interest or ask us anything about the aircraft, pricing, training, or delivery."></textarea>
+
+                </div>
+
+
+                <input
+                    type="hidden"
+                    name="aircraft_owner"
+                    value="Not Provided">
+
+
+                <button
+                    type="submit"
+                    class="contact-submit-new">
+
+                    Send My Request
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+
+                <p class="form-note">
+                    Your information goes directly to CloudRider Aviation.
+                    We don't sell or share your information.
+                </p>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     WHAT HAPPENS NEXT
+======================================================= -->
+
+<section class="contact-next">
+
+    <div class="contact-next-heading">
+
+        <span class="section-label blue">
+            WHAT HAPPENS NEXT?
+        </span>
+
+        <h2>
+            Simple. Personal. No runaround.
+        </h2>
+
+    </div>
+
+
+    <div class="contact-next-grid">
+
+
+        <div>
+
+            <span>
+                01
+            </span>
+
+            <strong>
+                Send Your Request
+            </strong>
+
+            <p>
+                Tell us what you're interested in
+                and where you are in the buying process.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                02
+            </span>
+
+            <strong>
+                Talk With CloudRider
+            </strong>
+
+            <p>
+                You'll hear directly from someone
+                who understands the aircraft and ownership process.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                03
+            </span>
+
+            <strong>
+                Build Your Plan
+            </strong>
+
+            <p>
+                Review the right aircraft, pricing,
+                training, delivery, and next steps.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+{% endblock %}
