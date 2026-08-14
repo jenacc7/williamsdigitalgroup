@@ -1,23 +1,97 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% block title %}
+    <title>
 S-Zero Pricing & Ownership | CloudRider Aviation
-{% endblock %}
+</title>
 
-{% block meta_description %}
+    <meta name="description"
+          content="
 View S-Zero personal flying aircraft pricing from CloudRider Aviation, including base aircraft prices, U.S. import and 7-day air delivery, accessories, and ownership support.
-{% endblock %}
+">
 
-{% block og_title %}
+    <meta property="og:title"
+          content="
 S-Zero Pricing & Ownership | CloudRider Aviation
-{% endblock %}
+">
 
-{% block og_description %}
+    <meta property="og:description"
+          content="
 Compare S-Zero aircraft pricing, U.S. import and express delivery costs, accessories, training, and ownership support.
-{% endblock %}
+">
+
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet"
+          href="static/css/style.css">
+</head>
+
+<body>
 
 
-{% block content %}
+<header class="site-header">
+
+    <div class="nav-wrap">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html"
+           class="brand">
+
+            <img
+                src="static/images/cloudrider-logo.jpeg"
+                alt="CloudRider Aviation"
+                class="site-logo">
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="main-nav">
+
+            <a href="aircraft">
+                Aircraft
+            </a>
+
+            <a href="pricing">
+                Pricing
+            </a>
+
+            <a href="training">
+                Training
+            </a>
+
+            <a href="about">
+                Why CloudRider
+            </a>
+
+            <a href="contact">
+                Contact
+            </a>
+
+            <a href="contact"
+               class="nav-button">
+
+                Request Info
+
+            </a>
+
+        </nav>
+
+
+    </div>
+
+</header>
+
+
+<main>
+
+    
 
 
 <!-- ======================================================
@@ -121,7 +195,7 @@ Compare S-Zero aircraft pricing, U.S. import and express delivery costs, accesso
             </div>
 
 
-            <a href="{{ url_for('contact') }}"
+            <a href="contact"
                class="button button-dark pricing-button">
                 Ask About the Basic
             </a>
@@ -166,7 +240,7 @@ Compare S-Zero aircraft pricing, U.S. import and express delivery costs, accesso
             </div>
 
 
-            <a href="{{ url_for('contact') }}"
+            <a href="contact"
                class="button button-dark pricing-button">
                 Ask About the Plus
             </a>
@@ -215,7 +289,7 @@ Compare S-Zero aircraft pricing, U.S. import and express delivery costs, accesso
             </div>
 
 
-            <a href="{{ url_for('contact') }}"
+            <a href="contact"
                class="button button-primary pricing-button">
                 Ask About Max Lite
             </a>
@@ -260,7 +334,7 @@ Compare S-Zero aircraft pricing, U.S. import and express delivery costs, accesso
             </div>
 
 
-            <a href="{{ url_for('contact') }}"
+            <a href="contact"
                class="button button-dark pricing-button">
                 Ask About the Max
             </a>
@@ -276,7 +350,7 @@ Compare S-Zero aircraft pricing, U.S. import and express delivery costs, accesso
             Need the full specifications?
         </span>
 
-        <a href="{{ url_for('aircraft') }}">
+        <a href="aircraft">
             Compare S-Zero Models →
         </a>
 
@@ -575,7 +649,7 @@ Compare S-Zero aircraft pricing, U.S. import and express delivery costs, accesso
             Send it to us for review.
         </p>
 
-        <a href="{{ url_for('contact') }}"
+        <a href="contact"
            class="button button-primary">
             Request a Price Review
         </a>
@@ -661,7 +735,7 @@ Compare S-Zero aircraft pricing, U.S. import and express delivery costs, accesso
 
     <div class="ownership-training-link">
 
-        <a href="{{ url_for('training') }}"
+        <a href="training"
            class="text-link">
             Explore the CloudRider Training Experience →
         </a>
@@ -691,7 +765,7 @@ Compare S-Zero aircraft pricing, U.S. import and express delivery costs, accesso
         options, delivery, training, and current pricing.
     </p>
 
-    <a href="{{ url_for('contact') }}"
+    <a href="contact"
        class="button button-primary">
         Request Information
     </a>
@@ -699,4 +773,76 @@ Compare S-Zero aircraft pricing, U.S. import and express delivery costs, accesso
 </section>
 
 
-{% endblock %}
+
+
+</main>
+
+
+<footer class="site-footer">
+
+
+    <div class="footer-wrap">
+
+
+        <!-- FOOTER BRAND -->
+
+        <div class="footer-brand">
+
+            <img
+                src="static/images/cloudrider-logo.jpeg"
+                alt="CloudRider Aviation"
+                class="footer-logo">
+
+            <p>
+                Personal flight.<br>
+                Real training.<br>
+                Real support.
+            </p>
+
+        </div>
+
+
+        <!-- FOOTER LINKS -->
+
+        <div class="footer-links">
+
+            <a href="aircraft">
+                Aircraft
+            </a>
+
+            <a href="pricing">
+                Pricing
+            </a>
+
+            <a href="training">
+                Training
+            </a>
+
+            <a href="about">
+                Why CloudRider
+            </a>
+
+            <a href="contact">
+                Contact
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 CloudRider Aviation. All rights reserved.
+        </p>
+
+    </div>
+
+
+</footer>
+
+
+</body>
+</html>

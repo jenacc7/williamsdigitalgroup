@@ -1,23 +1,97 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% block title %}
+    <title>
 Contact CloudRider Aviation | S-Zero Personal Aircraft
-{% endblock %}
+</title>
 
-{% block meta_description %}
+    <meta name="description"
+          content="
 Contact CloudRider Aviation for S-Zero personal flying aircraft pricing, availability, training, U.S. delivery, demonstrations, and ownership information.
-{% endblock %}
+">
 
-{% block og_title %}
+    <meta property="og:title"
+          content="
 Request S-Zero Information | CloudRider Aviation
-{% endblock %}
+">
 
-{% block og_description %}
+    <meta property="og:description"
+          content="
 Talk directly with CloudRider Aviation about S-Zero aircraft availability, pricing, training, delivery, and ownership.
-{% endblock %}
+">
+
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet"
+          href="static/css/style.css">
+</head>
+
+<body>
 
 
-{% block content %}
+<header class="site-header">
+
+    <div class="nav-wrap">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html"
+           class="brand">
+
+            <img
+                src="static/images/cloudrider-logo.jpeg"
+                alt="CloudRider Aviation"
+                class="site-logo">
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="main-nav">
+
+            <a href="aircraft">
+                Aircraft
+            </a>
+
+            <a href="pricing">
+                Pricing
+            </a>
+
+            <a href="training">
+                Training
+            </a>
+
+            <a href="about">
+                Why CloudRider
+            </a>
+
+            <a href="contact">
+                Contact
+            </a>
+
+            <a href="contact"
+               class="nav-button">
+
+                Request Info
+
+            </a>
+
+        </nav>
+
+
+    </div>
+
+</header>
+
+
+<main>
+
+    
 
 
 <!-- ======================================================
@@ -171,26 +245,16 @@ Talk directly with CloudRider Aviation about S-Zero aircraft availability, prici
             </div>
 
 
-            {% with messages = get_flashed_messages(with_categories=true) %}
+            
 
-                {% if messages %}
+                
 
-                    {% for category, message in messages %}
-
-                        <div class="flash-message {{ category }}">
-                            {{ message }}
-                        </div>
-
-                    {% endfor %}
-
-                {% endif %}
-
-            {% endwith %}
+            
 
 
             <form
                 method="POST"
-                action="{{ url_for('contact') }}"
+                action="contact"
                 class="cloudrider-form">
 
 
@@ -503,4 +567,76 @@ Talk directly with CloudRider Aviation about S-Zero aircraft availability, prici
 </section>
 
 
-{% endblock %}
+
+
+</main>
+
+
+<footer class="site-footer">
+
+
+    <div class="footer-wrap">
+
+
+        <!-- FOOTER BRAND -->
+
+        <div class="footer-brand">
+
+            <img
+                src="static/images/cloudrider-logo.jpeg"
+                alt="CloudRider Aviation"
+                class="footer-logo">
+
+            <p>
+                Personal flight.<br>
+                Real training.<br>
+                Real support.
+            </p>
+
+        </div>
+
+
+        <!-- FOOTER LINKS -->
+
+        <div class="footer-links">
+
+            <a href="aircraft">
+                Aircraft
+            </a>
+
+            <a href="pricing">
+                Pricing
+            </a>
+
+            <a href="training">
+                Training
+            </a>
+
+            <a href="about">
+                Why CloudRider
+            </a>
+
+            <a href="contact">
+                Contact
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 CloudRider Aviation. All rights reserved.
+        </p>
+
+    </div>
+
+
+</footer>
+
+
+</body>
+</html>

@@ -1,23 +1,97 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% block title %}
+    <title>
 CloudRider Aviation | S-Zero Personal Flying Aircraft
-{% endblock %}
+</title>
 
-{% block meta_description %}
+    <meta name="description"
+          content="
 Explore CloudRider S-Zero personal flying aircraft with hands-on training, U.S. delivery support, real-world flight experience, and aircraft pricing starting at $59,000.
-{% endblock %}
+">
 
-{% block og_title %}
+    <meta property="og:title"
+          content="
 CloudRider Aviation | Personal Flight Has Arrived
-{% endblock %}
+">
 
-{% block og_description %}
+    <meta property="og:description"
+          content="
 Discover the S-Zero personal flying aircraft with real-world flight experience, hands-on training, U.S. delivery support, and ownership options from CloudRider Aviation.
-{% endblock %}
+">
+
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet"
+          href="static/css/style.css">
+</head>
+
+<body>
 
 
-{% block content %}
+<header class="site-header">
+
+    <div class="nav-wrap">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html"
+           class="brand">
+
+            <img
+                src="static/images/cloudrider-logo.jpeg"
+                alt="CloudRider Aviation"
+                class="site-logo">
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="main-nav">
+
+            <a href="aircraft">
+                Aircraft
+            </a>
+
+            <a href="pricing">
+                Pricing
+            </a>
+
+            <a href="training">
+                Training
+            </a>
+
+            <a href="about">
+                Why CloudRider
+            </a>
+
+            <a href="contact">
+                Contact
+            </a>
+
+            <a href="contact"
+               class="nav-button">
+
+                Request Info
+
+            </a>
+
+        </nav>
+
+
+    </div>
+
+</header>
+
+
+<main>
+
+    
 
 <!-- ======================================================
      HERO
@@ -48,12 +122,12 @@ Discover the S-Zero personal flying aircraft with real-world flight experience, 
 
         <div class="hero-buttons">
 
-            <a href="{{ url_for('aircraft') }}"
+            <a href="aircraft"
                class="button button-primary">
                 Explore Aircraft
             </a>
 
-            <a href="{{ url_for('contact') }}"
+            <a href="contact"
                class="button button-outline">
                 Request Information
             </a>
@@ -113,7 +187,7 @@ Discover the S-Zero personal flying aircraft with real-world flight experience, 
             aviation technology into one unforgettable machine.
         </p>
 
-        <a href="{{ url_for('aircraft') }}"
+        <a href="aircraft"
            class="text-link">
             Explore the Aircraft →
         </a>
@@ -123,7 +197,7 @@ Discover the S-Zero personal flying aircraft with real-world flight experience, 
     <div class="home-intro-image">
 
         <img
-            src="{{ url_for('static', filename='images/flight-field.jpeg') }}"
+            src="static/images/flight-field.jpeg"
             alt="CloudRider S-Zero personal flying aircraft in flight">
 
     </div>
@@ -155,7 +229,7 @@ Discover the S-Zero personal flying aircraft with real-world flight experience, 
             why personal flight is generating so much excitement.
         </p>
 
-        <a href="{{ url_for('contact') }}"
+        <a href="contact"
            class="button button-primary">
             Schedule a Demo
         </a>
@@ -177,7 +251,7 @@ Discover the S-Zero personal flying aircraft with real-world flight experience, 
                 preload="auto">
 
                 <source
-                    src="{{ url_for('static', filename='videos/szero-flight.mp4') }}"
+                    src="static/videos/szero-flight.mp4"
                     type="video/mp4">
 
                 Your browser does not support HTML5 video.
@@ -257,7 +331,7 @@ Discover the S-Zero personal flying aircraft with real-world flight experience, 
 
         </div>
 
-        <a href="{{ url_for('training') }}"
+        <a href="training"
            class="button button-primary">
             Explore Training
         </a>
@@ -296,7 +370,7 @@ Discover the S-Zero personal flying aircraft with real-world flight experience, 
             as a separate $22,000 package.
         </p>
 
-        <a href="{{ url_for('pricing') }}"
+        <a href="pricing"
            class="button button-dark">
             View Pricing
         </a>
@@ -354,7 +428,7 @@ Discover the S-Zero personal flying aircraft with real-world flight experience, 
             The view changes when the aircraft is yours.
         </p>
 
-        <a href="{{ url_for('contact') }}"
+        <a href="contact"
            class="button button-outline">
             Request Information
         </a>
@@ -383,11 +457,83 @@ Discover the S-Zero personal flying aircraft with real-world flight experience, 
         training, and U.S. delivery support.
     </p>
 
-    <a href="{{ url_for('contact') }}"
+    <a href="contact"
        class="button button-primary">
         Contact CloudRider
     </a>
 
 </section>
 
-{% endblock %}
+
+
+</main>
+
+
+<footer class="site-footer">
+
+
+    <div class="footer-wrap">
+
+
+        <!-- FOOTER BRAND -->
+
+        <div class="footer-brand">
+
+            <img
+                src="static/images/cloudrider-logo.jpeg"
+                alt="CloudRider Aviation"
+                class="footer-logo">
+
+            <p>
+                Personal flight.<br>
+                Real training.<br>
+                Real support.
+            </p>
+
+        </div>
+
+
+        <!-- FOOTER LINKS -->
+
+        <div class="footer-links">
+
+            <a href="aircraft">
+                Aircraft
+            </a>
+
+            <a href="pricing">
+                Pricing
+            </a>
+
+            <a href="training">
+                Training
+            </a>
+
+            <a href="about">
+                Why CloudRider
+            </a>
+
+            <a href="contact">
+                Contact
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 CloudRider Aviation. All rights reserved.
+        </p>
+
+    </div>
+
+
+</footer>
+
+
+</body>
+</html>

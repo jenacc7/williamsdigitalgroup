@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+S-Zero Personal Flying Aircraft | CloudRider Aviation
+</title>
+
+    <meta name="description"
+          content="
+Explore the S-Zero personal flying aircraft lineup from CloudRider Aviation. Compare S-Zero models, flight endurance, payload, controls, electric propulsion, and ownership options.
+">
+
+    <meta property="og:title"
+          content="
+Explore the S-Zero Personal Flying Aircraft
+">
+
+    <meta property="og:description"
+          content="
+Discover the S-Zero personal flying aircraft lineup and compare configurations, performance, electric propulsion, controls, training, and ownership options.
+">
+
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet"
+          href="static/css/style.css">
+</head>
+
+<body>
+
+
+<header class="site-header">
+
+    <div class="nav-wrap">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html"
+           class="brand">
+
+            <img
+                src="static/images/cloudrider-logo.jpeg"
+                alt="CloudRider Aviation"
+                class="site-logo">
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="main-nav">
+
+            <a href="aircraft">
+                Aircraft
+            </a>
+
+            <a href="pricing">
+                Pricing
+            </a>
+
+            <a href="training">
+                Training
+            </a>
+
+            <a href="about">
+                Why CloudRider
+            </a>
+
+            <a href="contact">
+                Contact
+            </a>
+
+            <a href="contact"
+               class="nav-button">
+
+                Request Info
+
+            </a>
+
+        </nav>
+
+
+    </div>
+
+</header>
+
+
+<main>
+
+    
+
+
+<!-- ======================================================
+     HERO
+======================================================= -->
+
+<section class="page-hero aircraft-hero">
+
+    <div class="page-hero-overlay"></div>
+
+    <div class="page-hero-content">
+
+        <span class="section-label blue">
+            THE S-ZERO
+        </span>
+
+        <h1>
+            Personal flight.<br>
+            <span>Your way.</span>
+        </h1>
+
+        <p>
+            Four S-Zero configurations. One completely different
+            way to experience personal flight.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#models"
+               class="button button-primary">
+                Compare Models
+            </a>
+
+            <a href="contact"
+               class="button button-outline">
+                Request Information
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     INTRO
+======================================================= -->
+
+<section class="aircraft-intro">
+
+    <div class="aircraft-intro-copy">
+
+        <span class="section-label blue">
+            MEET THE S-ZERO
+        </span>
+
+        <h2>
+            Personal flight,
+            reimagined.
+        </h2>
+
+        <p>
+            The S-Zero personal flying aircraft combines electric
+            vertical takeoff and landing technology, compact dimensions,
+            intelligent controls, and modern electric propulsion into
+            a platform designed for personal recreational flight.
+        </p>
+
+        <p>
+            Vertical takeoff means no traditional runway is required,
+            opening the door to an entirely different kind of flying experience.
+        </p>
+
+        <a href="#performance"
+           class="text-link">
+            Explore Performance →
+        </a>
+
+    </div>
+
+
+    <div class="aircraft-intro-image">
+
+        <img
+            src="static/images/hero.jpeg"
+            alt="CloudRider S-Zero electric personal flying aircraft in flight">
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     PERFORMANCE
+======================================================= -->
+
+<section class="spec-overview"
+         id="performance">
+
+    <div class="section-heading centered">
+
+        <span class="section-label blue">
+            CORE PERFORMANCE
+        </span>
+
+        <h2>
+            Built to put flight
+            within reach.
+        </h2>
+
+    </div>
+
+
+    <div class="spec-grid">
+
+        <div class="spec-card">
+
+            <span>
+                Maximum Speed
+            </span>
+
+            <strong>
+                70 KM/H
+            </strong>
+
+            <small>
+                Approx. 43 MPH
+            </small>
+
+        </div>
+
+
+        <div class="spec-card">
+
+            <span>
+                Flight Endurance
+            </span>
+
+            <strong>
+                30–50 MIN
+            </strong>
+
+            <small>
+                Model dependent
+            </small>
+
+        </div>
+
+
+        <div class="spec-card">
+
+            <span>
+                Maximum Payload
+            </span>
+
+            <strong>
+                UP TO 120 KG
+            </strong>
+
+            <small>
+                Approx. 264 lbs
+            </small>
+
+        </div>
+
+
+        <div class="spec-card">
+
+            <span>
+                Battery Swap
+            </span>
+
+            <strong>
+                APPROX. 2 MIN
+            </strong>
+
+            <small>
+                Quick-swap system
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     MODELS
+======================================================= -->
+
+<section class="model-section"
+         id="models">
+
+    <div class="section-heading">
+
+        <span class="section-label blue">
+            THE S-ZERO LINEUP
+        </span>
+
+        <h2>
+            Find your aircraft.
+        </h2>
+
+        <p>
+            Compare S-Zero configurations based on payload,
+            endurance, and your personal flight goals.
+        </p>
+
+    </div>
+
+
+    <div class="model-detail-grid">
+
+
+        <!-- S-ZERO BASIC -->
+
+        <article class="model-detail-card">
+
+            <div class="model-top">
+
+                <div>
+
+                    <span class="model-kicker">
+                        ENTRY CONFIGURATION
+                    </span>
+
+                    <h3>
+                        S-Zero Basic
+                    </h3>
+
+                </div>
+
+
+                <div class="model-price-wrap">
+
+                    <span>
+                        Starting at
+                    </span>
+
+                    <div class="model-price">
+                        $59,000
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="model-detail-row">
+                <span>Flight Endurance</span>
+                <strong>30 Minutes</strong>
+            </div>
+
+            <div class="model-detail-row">
+                <span>Maximum Payload</span>
+                <strong>90 KG</strong>
+            </div>
+
+            <div class="model-detail-row">
+                <span>Battery</span>
+                <strong>Quick-Swap</strong>
+            </div>
+
+            <div class="model-detail-row">
+                <span>Airframe</span>
+                <strong>Titanium</strong>
+            </div>
+
+            <div class="model-detail-row">
+                <span>Flight Control</span>
+                <strong>Intelligent Joystick</strong>
+            </div>
+
+
+            <a href="contact"
+               class="button button-dark model-detail-button">
+                Ask About the Basic
+            </a>
+
+        </article>
+
+
+
+        <!-- S-ZERO PLUS -->
+
+        <article class="model-detail-card">
+
+            <div class="model-top">
+
+                <div>
+
+                    <span class="model-kicker">
+                        INCREASED PAYLOAD
+                    </span>
+
+                    <h3>
+                        S-Zero Plus
+                    </h3>
+
+                </div>
+
+
+                <div class="model-price-wrap">
+
+                    <span>
+                        Starting at
+                    </span>
+
+                    <div class="model-price">
+                        $79,000
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="model-detail-row">
+                <span>Flight Endurance</span>
+                <strong>30 Minutes</strong>
+            </div>
+
+            <div class="model-detail-row">
+                <span>Maximum Payload</span>
+                <strong>120 KG</strong>
+            </div>
+
+            <div class="model-detail-row">
+                <span>Battery</span>
+                <strong>Quick-Swap</strong>
+            </div>
+
+            <div class="model-detail-row">
+                <span>Airframe</span>
+                <strong>Titanium</strong>
+            </div>
+
+            <div class="model-detail-row">
+                <span>Flight Control</span>
+                <strong>Intelligent Joystick</strong>
+            </div>
+
+
+            <a href="contact"
+               class="button button-dark model-detail-button">
+                Ask About the Plus
+            </a>
+
+        </article>
+
+
+
+        <!-- MAX LITE -->
+
+        <article class="model-detail-card highlighted">
+
+            <div class="model-popular">
+                FEATURED CONFIGURATION
+            </div>
+
+
+            <div class="model-top">
+
+                <div>
+
+                    <span class="model-kicker">
+                        PERFORMANCE
+                    </span>
+
+                    <h3>
+                        Max Lite
+                    </h3>
+
+                </div>
+
+
+                <div class="model-price-wrap">
+
+                    <span>
+                        Starting at
+                    </span>
+
+                    <div class="model-price">
+                        $99,000
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="model-detail-row">
+                <span>Flight Endurance</span>
+                <strong>30 Minutes</strong>
+            </div>
+
+            <div class="model-detail-row">
+                <span>Maximum Payload</span>
+                <strong>120 KG</strong>
+            </div>
+
+            <div class="model-detail-row">
+                <span>Battery</span>
+                <strong>Quick-Swap</strong>
+            </div>
+
+            <div class="model-detail-row">
+                <span>Airframe</span>
+                <strong>Titanium</strong>
+            </div>
+
+            <div class="model-detail-row">
+                <span>Flight Control</span>
+                <strong>Intelligent Joystick</strong>
+            </div>
+
+
+            <a href="contact"
+               class="button button-primary model-detail-button">
+                Ask About Max Lite
+            </a>
+
+        </article>
+
+
+
+        <!-- MAX -->
+
+        <article class="model-detail-card">
+
+            <div class="model-top">
+
+                <div>
+
+                    <span class="model-kicker">
+                        EXTENDED ENDURANCE
+                    </span>
+
+                    <h3>
+                        Max
+                    </h3>
+
+                </div>
+
+
+                <div class="model-price-wrap">
+
+                    <span>
+                        Starting at
+                    </span>
+
+                    <div class="model-price">
+                        $119,000
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="model-detail-row">
+                <span>Flight Endurance</span>
+                <strong>50 Minutes</strong>
+            </div>
+
+            <div class="model-detail-row">
+                <span>Maximum Payload</span>
+                <strong>120 KG</strong>
+            </div>
+
+            <div class="model-detail-row">
+                <span>Battery</span>
+                <strong>Quick-Swap</strong>
+            </div>
+
+            <div class="model-detail-row">
+                <span>Airframe</span>
+                <strong>Titanium</strong>
+            </div>
+
+            <div class="model-detail-row">
+                <span>Flight Control</span>
+                <strong>Intelligent Joystick</strong>
+            </div>
+
+
+            <a href="contact"
+               class="button button-dark model-detail-button">
+                Ask About the Max
+            </a>
+
+        </article>
+
+    </div>
+
+
+    <div class="model-pricing-link">
+
+        <p>
+            Looking for delivery costs, accessories,
+            import fees, and ownership pricing?
+        </p>
+
+        <a href="pricing"
+           class="text-link">
+            View Pricing & Ownership →
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     TECHNOLOGY
+======================================================= -->
+
+<section class="aircraft-features">
+
+    <div class="section-heading centered">
+
+        <span class="section-label blue">
+            AIRCRAFT TECHNOLOGY
+        </span>
+
+        <h2>
+            Designed to simplify
+            the flying experience.
+        </h2>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature-card">
+
+            <span>01</span>
+
+            <h3>
+                Intelligent Joystick
+            </h3>
+
+            <p>
+                A modern control interface designed around intuitive
+                pilot inputs and simplified aircraft control.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <span>02</span>
+
+            <h3>
+                AI-Assisted Flight Control
+            </h3>
+
+            <p>
+                Assisted flight-control technology supports aircraft
+                stability and response during operation.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <span>03</span>
+
+            <h3>
+                Electric Propulsion
+            </h3>
+
+            <p>
+                Electric propulsion provides a modern alternative
+                to traditional combustion-powered aircraft systems.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <span>04</span>
+
+            <h3>
+                Quick-Swap Batteries
+            </h3>
+
+            <p>
+                Battery packs are designed for rapid replacement
+                between flight sessions.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     TRAINING
+======================================================= -->
+
+<section class="aircraft-training-cta">
+
+    <div>
+
+        <span class="section-label blue">
+            MORE THAN THE AIRCRAFT
+        </span>
+
+        <h2>
+            Learn the S-Zero
+            before yours arrives.
+        </h2>
+
+        <p>
+            Purchasing through CloudRider Aviation means your experience
+            can begin before delivery. Train on our equipment with
+            guidance from someone with real S-Zero flight experience.
+        </p>
+
+    </div>
+
+
+    <a href="training"
+       class="button button-primary">
+        Explore Training
+    </a>
+
+</section>
+
+
+
+<!-- ======================================================
+     FINAL CTA
+======================================================= -->
+
+<section class="final-cta">
+
+    <span class="section-label blue">
+        WHICH S-ZERO IS RIGHT FOR YOU?
+    </span>
+
+    <h2>
+        Let's find your aircraft.
+    </h2>
+
+    <p>
+        Ask about configurations, availability,
+        pricing, training, and delivery.
+    </p>
+
+    <a href="contact"
+       class="button button-primary">
+        Request Information
+    </a>
+
+</section>
+
+
+
+</main>
+
+
+<footer class="site-footer">
+
+
+    <div class="footer-wrap">
+
+
+        <!-- FOOTER BRAND -->
+
+        <div class="footer-brand">
+
+            <img
+                src="static/images/cloudrider-logo.jpeg"
+                alt="CloudRider Aviation"
+                class="footer-logo">
+
+            <p>
+                Personal flight.<br>
+                Real training.<br>
+                Real support.
+            </p>
+
+        </div>
+
+
+        <!-- FOOTER LINKS -->
+
+        <div class="footer-links">
+
+            <a href="aircraft">
+                Aircraft
+            </a>
+
+            <a href="pricing">
+                Pricing
+            </a>
+
+            <a href="training">
+                Training
+            </a>
+
+            <a href="about">
+                Why CloudRider
+            </a>
+
+            <a href="contact">
+                Contact
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 CloudRider Aviation. All rights reserved.
+        </p>
+
+    </div>
+
+
+</footer>
+
+
+</body>
+</html>

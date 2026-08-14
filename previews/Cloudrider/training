@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+S-Zero Training & Delivery Support | CloudRider Aviation
+</title>
+
+    <meta name="description"
+          content="
+CloudRider Aviation provides hands-on S-Zero training, pre-delivery aircraft familiarization, delivery-day setup support, and guidance from personnel with real S-Zero flight experience.
+">
+
+    <meta property="og:title"
+          content="
+S-Zero Training & Delivery Support | CloudRider Aviation
+">
+
+    <meta property="og:description"
+          content="
+Train before your aircraft arrives with hands-on S-Zero guidance, real flight experience, and delivery-day support from CloudRider Aviation.
+">
+
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet"
+          href="static/css/style.css">
+</head>
+
+<body>
+
+
+<header class="site-header">
+
+    <div class="nav-wrap">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html"
+           class="brand">
+
+            <img
+                src="static/images/cloudrider-logo.jpeg"
+                alt="CloudRider Aviation"
+                class="site-logo">
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="main-nav">
+
+            <a href="aircraft">
+                Aircraft
+            </a>
+
+            <a href="pricing">
+                Pricing
+            </a>
+
+            <a href="training">
+                Training
+            </a>
+
+            <a href="about">
+                Why CloudRider
+            </a>
+
+            <a href="contact">
+                Contact
+            </a>
+
+            <a href="contact"
+               class="nav-button">
+
+                Request Info
+
+            </a>
+
+        </nav>
+
+
+    </div>
+
+</header>
+
+
+<main>
+
+    
+
+
+<!-- ======================================================
+     HERO
+======================================================= -->
+
+<section class="page-hero training-page-hero">
+
+    <div class="page-hero-overlay"></div>
+
+    <div class="page-hero-content">
+
+        <span class="section-label blue">
+            TRAINING & DELIVERY SUPPORT
+        </span>
+
+        <h1>
+            Learn it before<br>
+            <span>yours arrives.</span>
+        </h1>
+
+        <p>
+            Purchasing an S-Zero through CloudRider Aviation means
+            your experience can begin before delivery with hands-on
+            aircraft familiarization, real-world guidance, and support
+            from someone who has actually flown the platform.
+        </p>
+
+        <a href="#training-process"
+           class="button button-primary">
+            See How It Works
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     CORE DIFFERENTIATOR
+======================================================= -->
+
+<section class="training-difference">
+
+    <div class="training-difference-copy">
+
+        <span class="section-label blue">
+            THE CLOUDRIDER DIFFERENCE
+        </span>
+
+        <h2>
+            There’s a difference between
+            knowing the aircraft and
+            actually flying it.
+        </h2>
+
+        <p>
+            CloudRider customers can receive guidance from personnel
+            with real S-Zero flight experience — not just familiarity
+            with specifications, manuals, or product literature.
+        </p>
+
+        <p>
+            That firsthand experience gives owners a better opportunity
+            to understand the aircraft, its controls, and what to expect
+            before their own S-Zero is delivered.
+        </p>
+
+    </div>
+
+
+    <div class="training-difference-image">
+
+        <img
+            src="static/images/flight-field.jpeg"
+            alt="CloudRider S-Zero personal flying aircraft during hands-on training">
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     TRAINING PROCESS
+======================================================= -->
+
+<section class="training-process"
+         id="training-process">
+
+    <div class="section-heading centered">
+
+        <span class="section-label blue">
+            BEFORE YOUR AIRCRAFT ARRIVES
+        </span>
+
+        <h2>
+            Train first.
+            Take delivery prepared.
+        </h2>
+
+        <p>
+            Become familiar with the S-Zero platform before
+            your own aircraft arrives.
+        </p>
+
+    </div>
+
+
+    <div class="training-step-grid">
+
+
+        <div class="training-step">
+
+            <span>01</span>
+
+            <h3>
+                Aircraft Orientation
+            </h3>
+
+            <p>
+                Learn the aircraft layout, primary controls,
+                battery system, startup process, shutdown process,
+                and important ownership basics.
+            </p>
+
+        </div>
+
+
+        <div class="training-step">
+
+            <span>02</span>
+
+            <h3>
+                Hands-On Familiarization
+            </h3>
+
+            <p>
+                Spend time with the aircraft and become familiar
+                with the systems and controls before moving into
+                supervised flight experience.
+            </p>
+
+        </div>
+
+
+        <div class="training-step">
+
+            <span>03</span>
+
+            <h3>
+                Flight Experience
+            </h3>
+
+            <p>
+                Receive guided, aircraft-specific instruction
+                focused on control response, takeoff, landing,
+                and safe operating practices.
+            </p>
+
+        </div>
+
+
+        <div class="training-step">
+
+            <span>04</span>
+
+            <h3>
+                Prepared for Delivery
+            </h3>
+
+            <p>
+                When your S-Zero arrives, it won’t be the first
+                time you have seen, handled, or experienced
+                the platform.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     REAL EXPERIENCE
+======================================================= -->
+
+<section class="real-experience-section">
+
+    <div class="real-experience-inner">
+
+        <span class="section-label blue">
+            REAL S-ZERO EXPERIENCE
+        </span>
+
+        <h2>
+            Learn from someone
+            who has actually flown it.
+        </h2>
+
+        <p>
+            CloudRider Aviation brings firsthand S-Zero experience
+            into the ownership process so customers can learn from
+            someone who understands the aircraft from the pilot's seat.
+        </p>
+
+
+        <div class="experience-points">
+
+
+            <div>
+
+                <strong>
+                    Actual S-Zero Flight Experience
+                </strong>
+
+                <span>
+                    Guidance informed by real time operating the aircraft.
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Aircraft-Specific Guidance
+                </strong>
+
+                <span>
+                    Familiarization centered around the same platform
+                    you are purchasing.
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Practical Owner Preparation
+                </strong>
+
+                <span>
+                    Understand what to expect before your own aircraft
+                    reaches your property.
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     DELIVERY DAY
+======================================================= -->
+
+<section class="delivery-support-section">
+
+    <div class="delivery-support-copy">
+
+        <span class="section-label blue">
+            DELIVERY DAY SUPPORT
+        </span>
+
+        <h2>
+            We don’t hand you a crate
+            and disappear.
+        </h2>
+
+        <p>
+            When you purchase through CloudRider Aviation,
+            our involvement continues when your aircraft arrives.
+        </p>
+
+        <p>
+            For qualifying purchases, our team can help coordinate
+            delivery, assist with initial setup, and help you transition
+            from training on our equipment to becoming familiar with your own.
+        </p>
+
+    </div>
+
+
+    <div class="delivery-support-list">
+
+
+        <div>
+
+            <span>01</span>
+
+            <strong>
+                Delivery Coordination
+            </strong>
+
+            <p>
+                Know what to expect as your aircraft moves
+                through import and final delivery.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <span>02</span>
+
+            <strong>
+                Initial Setup Support
+            </strong>
+
+            <p>
+                Receive help with initial aircraft setup
+                and preparation after arrival.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <span>03</span>
+
+            <strong>
+                Owner Familiarization
+            </strong>
+
+            <p>
+                Review key aircraft systems and procedures
+                using your own S-Zero.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <span>04</span>
+
+            <strong>
+                U.S.-Based Support
+            </strong>
+
+            <p>
+                Continue to have a domestic point of contact
+                after the aircraft has been delivered.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     WHY THIS MATTERS
+======================================================= -->
+
+<section class="why-training-matters">
+
+    <div class="section-heading centered">
+
+        <span class="section-label blue">
+            THE OWNERSHIP ADVANTAGE
+        </span>
+
+        <h2>
+            Your first day with your aircraft
+            shouldn't feel like day one.
+        </h2>
+
+    </div>
+
+
+    <div class="why-training-grid">
+
+
+        <div>
+
+            <h3>
+                Familiarity
+            </h3>
+
+            <p>
+                Build experience with the S-Zero platform
+                before your own aircraft arrives.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Preparation
+            </h3>
+
+            <p>
+                Understand key systems, controls,
+                procedures, and ownership expectations.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Confidence
+            </h3>
+
+            <p>
+                Begin ownership with prior exposure
+                to the aircraft instead of starting from zero.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     OWNERSHIP CTA
+======================================================= -->
+
+<section class="training-ownership-cta">
+
+    <div>
+
+        <span class="section-label blue">
+            BUYING AN S-ZERO?
+        </span>
+
+        <h2>
+            Make the experience part
+            of the purchase.
+        </h2>
+
+        <p>
+            Compare aircraft pricing, delivery options,
+            available configurations, and ownership support.
+        </p>
+
+    </div>
+
+
+    <a href="pricing"
+       class="button button-primary">
+        Explore Pricing & Ownership
+    </a>
+
+</section>
+
+
+
+<!-- ======================================================
+     FINAL CTA
+======================================================= -->
+
+<section class="final-cta">
+
+    <span class="section-label blue">
+        READY TO LEARN MORE?
+    </span>
+
+    <h2>
+        Start prepared.
+        Fly prepared.
+    </h2>
+
+    <p>
+        Ask about S-Zero availability, training,
+        delivery support, and current ownership options.
+    </p>
+
+    <a href="contact"
+       class="button button-primary">
+        Request Information
+    </a>
+
+</section>
+
+
+
+
+</main>
+
+
+<footer class="site-footer">
+
+
+    <div class="footer-wrap">
+
+
+        <!-- FOOTER BRAND -->
+
+        <div class="footer-brand">
+
+            <img
+                src="static/images/cloudrider-logo.jpeg"
+                alt="CloudRider Aviation"
+                class="footer-logo">
+
+            <p>
+                Personal flight.<br>
+                Real training.<br>
+                Real support.
+            </p>
+
+        </div>
+
+
+        <!-- FOOTER LINKS -->
+
+        <div class="footer-links">
+
+            <a href="aircraft">
+                Aircraft
+            </a>
+
+            <a href="pricing">
+                Pricing
+            </a>
+
+            <a href="training">
+                Training
+            </a>
+
+            <a href="about">
+                Why CloudRider
+            </a>
+
+            <a href="contact">
+                Contact
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 CloudRider Aviation. All rights reserved.
+        </p>
+
+    </div>
+
+
+</footer>
+
+
+</body>
+</html>
